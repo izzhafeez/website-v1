@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+	<title>Music</title>
+	<link rel="stylesheet" href="index.css">
+	<script src='Main Page.js'></script>
+	<link rel='icon' type='image/png' href='img/Music Logo.png'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	</head>
+<body>
+	<script>
+		$(document).ready(function(){
+			$('#navbar div:nth-child(3)').click(function() {
+				if ($('#menu').css('display')==='none') {
+					$('#menu').css('display','inline');
+				} else {
+					$('#menu').css('display','none');
+				}
+			})
+			if($(window).scrollTop()>0.5*$(window).width()) {
+				$('.tomove').css({'position':'fixed','top':'0'});
+				$('body:not(.tomove)').css({'margin-top':'10vmin'});
+			} else {
+				$('#navbar').css({'position':'relative','top':'0'});
+				$('#menu').css({'position':'absolute','top':'50vw'});
+				$('body:not(.tomove)').css({'margin-top':'0vmin'});
+			}
+			$(window).on('scroll', function() {
+				if ($(window).scrollTop()>0.5*$(window).width()) {
+					$('.tomove').css({'position':'fixed','top':'0'});
+					$('body:not(.tomove)').css({'margin-top':'10vmin'});
+				} else {
+					$('#navbar').css({'position':'relative','top':'0'});
+					$('#menu').css({'position':'absolute','top':'50vw'});
+					$('body:not(.tomove)').css({'margin-top':'0vmin'});
+				}
+			})
+			var textWrapper = document.querySelector('.ml10 .letters');
+			textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+			anime.timeline({loop: true})
+			  .add({
+			    targets: '.ml10 .letter',
+			    rotateY: [-90, 0],
+			    duration: 13000,
+			    delay: (el, i) => 45 * i
+			  }).add({
+			    targets: '.ml10',
+			    opacity: 0,
+			    duration: 2000,
+			    easing: "easeOutExpo",
+			    delay: 2000
+			  });
+		})
+	</script>
+	<div style="height:50vw; margin:0; background:#202020;">
+		<img src='img/squaremusic.jpg' style='width:40%; margin-left:30vw; margin-top:5%; position:absolute; display:inline-block; animation:normspin 10s linear infinite; object-fit:cover; border-radius:50%;'>
+		<h1 class="ml10">
+			<span class="text-wrapper">
+				<span class="letters">Music Site</span>
+			</span>
+		</h1>
+	</div>
+	<div id='navbar' class='tomove'>
+		<a href='index.html'><div><img src='img/navbar2.png'></div></a>
+		<div>Music</div>
+		<div><img src='img/navbar1.png'></div>
+	</div>
+	<div id='menu' class='tomove'>
+		<div style='height:calc(max(10vmin,50px))'></div>
+		<a href='awards.html' class='menu'><h2>Awards</h2></a>
+		<a href='interests.html' class='menu'><h2>Interests</h2></a>
+		<a href='personal.html' class='menu'><h2>Personal</h2></a>
+		<a href='music.html' class='menu' style='background:#F19A3E'><h2>Music</h2></a>
+		<a href='math.html' class='menu'><h2>Math</h2></a>
+		<a href='puzzles.html' class='menu'><h2>Puzzles</h2></a>
+	</div>
+	<div class='fivecontainer blank empty'>.</div>
+	<div class='ninetycontainer'>
+		<section class='tenmargin'><p class='header'>About the Site<hr></p><p>I've been involved in music for many stages in my life. It has always been an integral part of my <span style='color:#D88B37'>soul</span>. I have quite alot of experience playing piano, with a little time spent on guitar as well. Apart from that, I sang in my VS Choir during my secondary school days. But now I'm more involved in music than ever, creating transcriptions, medleys and even original songs!</p></section>
+		<section class='nomargin'>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='music/transcriptions.html'><img src='music/headerpic/transcriptions.jpg' style='width:70%;box-shadow:0px 5px 0px #F19A3E' class='imghover'></a>
+					<p class='subheader'>Transcriptions</p><p class='small'>I tend to transcribe recent songs with intermediate-level chord changes. My relative pitch I think improved quite a bit over the past few years. No absolute pitch though, for that is a PAIN.</p><p><a href='music/transcriptions.html'>Visit Site >></a></p>
+				</section>
+			</section>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='music/originals.html'><img src='music/headerpic/originals.jpg' style='width:70%;box-shadow:0px 5px 0px #F19A3E' class='imghover'></a>
+					<p class='subheader'>Originals</p><p class='small'>I've been trying to make original compositions for a long time. Incorporating various parts of my musical knowledge, I have quite alot of distinct melodies and test-outs. I. suck. at. lyrics. But I still tried and managed to create 1 good one and one cringy one. No doubt, my favourite one is All Alone, which took alot of my thoughts, energy, time and knowledge to create. Do check out some of my creations and do LMK whether I should continue developing certain ones.<br><br>I think I'm done trying to use music knowledge to create melodies though so now I've just been on the piano playing what feels right, not what should feel right. No time to notate them though.</p><p><a href='music/originals.html'>Visit Site >></a></p>
+				</section>
+			</section>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='music/medleys.html'><img src='music/headerpic/medleys.jpg' style='width:70%;box-shadow:0px 5px 0px #F19A3E' class='imghover'></a>
+					<p class='subheader'>Medleys</p><p class='small'>Ever since I saw Pop Danthology 2013, I've been way into Medleys and Mashups. Just combining the distinct portions of seemingly disparate songs, all in novel yet recognisable ways, always sounds pretty cool. Having tried so hard to create coherent medleys, I can only imagine the amount of creativity, dedication and skill it must've taken for mashup artists to do this on a regular basis. Insanity.</p><p><a href='music/medleys.html'>Visit Site >></a></p>
+				</section>
+			</section>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='music/youtube.html'><img src='music/headerpic/youtube.jpg' style='width:70%;box-shadow:0px 5px 0px #F19A3E' class='imghover'></a>
+					<p class='subheader'>YouTube</p><p class='small'>There are a ton of great YouTube channels out there centred around music. Not only the VEVO/KPOP ones but also all those teaching useful music theory, those deconstructing songs. Such channels are uber-useful for beginner and advanced musicians alike.</p><p><a href='music/youtube.html'>Visit Site >></a></p>
+				</section>
+			</section>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='music/parodies.html'><img src='music/headerpic/parodies.jpg' style='width:70%;box-shadow:0px 5px 0px #F19A3E' class='imghover'></a>
+					<p class='subheader'>Parodies</p><p class='small'>Let's just say my Sec 3 life was pretty weird :)</p><p><a href='music/parodies.html'>Visit Site >></a></p>
+				</section>
+			</section>
+		</section>
+		<section class='tenmargin'><p class='header'>My Music Journey<hr></p><p>My parents enrolled me in piano lessons when I was 5. I don't remember liking my time here.</br></br>After completing the course at Yamaha Music School, aged around 7, I started going for private piano lessons. Once or twice a week, I would go down to my teacher's house for lessons. Conveniently, my neighbour happened to be a piano teacher so yeah.. I quite enjoyed my time there, learning to play many diverse songs.</br></br>The highlight of this section of my music life was my piano recital at age 9. Ok so I was currently practicing for my Grade 1 Practical Exam and some music teachers, including my own, were having a piano-ish recital. Most of my teacher's students participated. All older than me. All higher grade than me. But she decided to put me in first because I was 'stable'. yAy</br></br>I went on with lessons but stopped grade 5 for both practical and theory because my hands were starting to hurt from playing.</br></br>Moving in to Secondary School, I wanted to join Concert Band. My parents were both in MB so I wanted to follow in their footsteps. During CCA selection process, we had to give 9 choices for a CCA. I of course put Band as first. I was satisfied with my 9 choices, as I felt that I would enjoy my time there. But what I did not expect was that the school would place me in CHOIR. Apparently they had fewer people or something. I wanted to appeal into Band at first.</br></br>INCOMPLETE</div></p></section>
+	</div>
+	<div class='fullcontainer' style='background:#3E4856;'>
+		<!-- <section class='halfcontainer'>
+			<section class='tenmarginside contacts'>
+				<p class='header'>Join the Mailing List!</p>
+				<script>(function(t,e,s,n){var o,a,c;t.SMCX=t.SMCX||[],e.getElementById(n)||(o=e.getElementsByTagName(s),a=o[o.length-1],c=e.createElement(s),c.type="text/javascript",c.async=!0,c.id=n,c.src=["https:"===location.protocol?"https://":"http://","widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgd_2BcEYo8O3z9VnKhrJB6wgHJfp1sXWTlxS580VT9icCxb.js"].join(""),a.parentNode.insertBefore(c,a))})(window,document,"script","smcx-sdk");</script>
+			</section>
+		</section> -->
+		<section class='fullcontainer'>
+			<section class='tenmarginside contacts'>
+				<p class='header'>Contact Me</p>
+				<p>
+					<a href='https://www.instagram.com/mynameizzhafeez/?hl=en'><span class='contactsmath'>Insta</span><span class='contactspuzzles'>gram</span></span></a> / 
+					<a href='https://musescore.com/izzhafeez'><span class='contactsmusic'>MuseScore</span></a> / 
+					<a href='mailto:blueticker117@gmail.com'><span class='contactspersonal'>Gmail</span></a> / 
+					<a href='https://www.jetpunk.com/users/zeefahzzi'><span class='contactsinterests'>JetPunk</span></a> / 
+					<a href='https://www.youtube.com/channel/UCbpuVmLLEmLWDlCim2dCgoA'><span class='contactsmusic'>YouTube</span></a> / 
+					<a href='https://www.linkedin.com/in/izzhafeez/'><span class='contactsawards'>LinkedIn</span></a> / 
+					<a href='https://blueticker117.wixsite.com/dontbluetickme'><span class='contactspuzzles'>Old Website</span></a> / 
+					<a href='https://www.youtube.com/watch?v=aRsWk4JZa5k'><span class='contactspersonal'>Tinder</span></a> / 
+					<a href='https://www.duolingo.com/profile/ZeefahZzi'><span class='contactsinterests'>Duolingo</span></a>
+				</p>
+			</section>
+		</section>
+		<section class='fullcontainer'>
+			<section class='tenmarginside'>
+				<p class='small' style='color:white'>© Ask me first before stealing anything hor</p>
+				<p class='small' style='color:white'>Izz Hafeez 2k20</p>
+			</section>
+		</section>
+	</div>
+</body>
+</html>

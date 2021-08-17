@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+	<title>SCDF</title>
+	<link rel="stylesheet" href="../index.css">
+	<script src='Main Page.js'></script>
+	<link rel='icon' type='image/png' href='../img/Awards Logo.png'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	</head>
+<body>
+	<script>
+		$(document).ready(function(){
+			$('#navbar div:nth-child(3)').click(function() {
+				if ($('#menu').css('display')==='none') {
+					$('#menu').css('display','inline');
+				} else {
+					$('#menu').css('display','none');
+				}
+			})
+			if($(window).scrollTop()>0.5*$(window).width()) {
+				$('.tomove').css({'position':'fixed','top':'0'});
+				$('body:not(.tomove)').css({'margin-top':'10vmin'});
+			} else {
+				$('#navbar').css({'position':'relative','top':'0'});
+				$('#menu').css({'position':'absolute','top':'50vw'});
+				$('body:not(.tomove)').css({'margin-top':'0vmin'});
+			}
+			$(window).on('scroll', function() {
+				if ($(window).scrollTop()>0.5*$(window).width()) {
+					$('.tomove').css({'position':'fixed','top':'0'});
+					$('body:not(.tomove)').css({'margin-top':'10vmin'});
+				} else {
+					$('#navbar').css({'position':'relative','top':'0'});
+					$('#menu').css({'position':'absolute','top':'50vw'});
+					$('body:not(.tomove)').css({'margin-top':'0vmin'});
+				}
+			})
+			var textWrapper = document.querySelector('.ml10 .letters');
+			textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+			anime.timeline({loop: true})
+			  .add({
+			    targets: '.ml10 .letter',
+			    rotateY: [-90, 0],
+			    duration: 13000,
+			    delay: (el, i) => 45 * i
+			  }).add({
+			    targets: '.ml10',
+			    opacity: 0,
+			    duration: 2000,
+			    easing: "easeOutExpo",
+			    delay: 2000
+			  });
+		})
+	</script>
+	<div style="height:50vw; margin:0; background:#202020;">
+		<img src='../img/squareawards.jpg' style='width:40%; margin-left:30vw; margin-top:5%; position:absolute; display:inline-block; animation:normspin 10s linear infinite; object-fit:cover; border-radius:50%;'>
+		<h1 class="ml10">
+			<span class="text-wrapper">
+				<span class="letters">Awards Site</span>
+			</span>
+		</h1>
+	</div>
+	<div id='navbar' class='tomove'>
+		<a href='../awards.html'><div><img src='../img/navbar3.png'></div></a>
+		<div>National Service</div>
+		<div><img src='../img/navbar1.png'></div>
+	</div>
+	<div id='menu' class='tomove'>
+		<div style='height:calc(max(10vmin,50px))'></div>
+		<a href='awards.html' class='menu' style='background:#8332AC'><h2>Awards</h2></a>
+		<a href='interests.html' class='menu'><h2>Interests</h2></a>
+		<a href='personal.html' class='menu'><h2>Personal</h2></a>
+		<a href='music.html' class='menu'><h2>Music</h2></a>
+		<a href='math.html' class='menu'><h2>Math</h2></a>
+		<a href='puzzles.html' class='menu'><h2>Puzzles</h2></a>
+	</div>
+	<div class='tencontainer empty blank'>.</div>
+	<div class='eightycontainer'><section class='tenmargin'><img src='headerpic/ns.jpg' style='width:100%;'></section></div>
+	<div class='tencontainer empty blank'>.</div>
+	<div class='sixtycontainer'>
+		<section class='tenmarginside'>
+			<p class='subheader' style='color:#8332AC'>Singapore Civil Defence Force<hr></p>
+			<p>This is the time to spam all the things I want to do. All before university starts. Mostly developing and working on my <a href='../interests.html'><span style='color:#2a6793'>interests</span></a>.</p>
+			<p>Singaporean Males are expected to serve the nation for 2 years (with some exceptions). Possessing the <a href='../personal/migraine.html'><span style='color:#E63946'>awkward body</span></a> that I have, I am labelled as unfit. My awards didn't stop here though, for I received the 'Best Trainee' Award for the SCDF Admin Support Course.</p> 
+			<p>I must say I am extremely lucky, for I got posted to an office job. But not only that, I'm a programming-intense data analyst assistant. Perfect for getting some work experience. After all, I get to deal with actual data, craft and maintain lengthy codes, all to solve complicated real-life problems within short time-frames. Pretty cool :P</p>
+			<p>My jobscope is rather wide-ranging, and getting roped into various projects is definitely interesting. But I guess my main role is to optimise ambulance placement. It's fun to brainstorm possible solutions with my branch-mates. But NOT fun to try to actually execute it. I absolutely need more experience in this to even survive in the working world :/</p>
+			<p>I'd like to call Python my second language, with it being my primary medium of writing code. With a little bit of Ruby thrown in there, I need to be able to fix and manipulate code in due time. Most of the time, although well-labelled, the codes are hard to follow. Should be because the scripts themselves are complex.</p>
+			<p>During the ample free time that I have, I <a href='../music.html'><span style='color:#9c6428'>create / compose music</span></a>, pick up <a href='../interests/languages.html'><span style='color:#2a6793'>several languages</span></a> simultaneously and go for a variety of courses. I also maintain an Instagram account showcasing some of my <a href='../math/graphing.html'><span style='color:#058647'>graphing art</span></a> and <a href='../puzzles.html'><span style='color:#837a2a'>puzzles</span></a>.</p>
+		</section>
+	</div>
+	<div class='fortycontainer'>
+		<section class='tenmarginside'>
+			<p class='subheader' style='color:#8332AC'>Awards<hr></p>
+			<p class='subheader'>2019</p>
+			<ul>
+				<li><p>Admin Support Course (Best Trainee)</p></li>
+				<li><p>汉语水平考试（三级）(Completion)</p></li>
+				<li><p>HarvardX Data Science (Completion)</p></li>
+			</ul>
+			<p class='subheader'>2020</p>
+			<ul>
+				<li><p>845 MuseScore followers</p></li>
+				<li><p>967 hours YouTube watchtime</p></li>
+				<li><p>459 Instagram followers :(</p></li>
+			</ul>
+		</section>
+	</div>
+	<div class='fivecontainer blank empty'>.</div>
+	<div class='fullcontainer' style='background:#3E4856;'>
+		<!-- <section class='halfcontainer'>
+			<section class='tenmarginside contacts'>
+				<p class='header'>Join the Mailing List!</p>
+				<script>(function(t,e,s,n){var o,a,c;t.SMCX=t.SMCX||[],e.getElementById(n)||(o=e.getElementsByTagName(s),a=o[o.length-1],c=e.createElement(s),c.type="text/javascript",c.async=!0,c.id=n,c.src=["https:"===location.protocol?"https://":"http://","widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgd_2BcEYo8O3z9VnKhrJB6wgHJfp1sXWTlxS580VT9icCxb.js"].join(""),a.parentNode.insertBefore(c,a))})(window,document,"script","smcx-sdk");</script>
+			</section>
+		</section> -->
+		<section class='fullcontainer'>
+			<section class='tenmarginside contacts'>
+				<p class='header'>Contact Me</p>
+				<p>
+					<a href='https://www.instagram.com/mynameizzhafeez/?hl=en'><span class='contactsmath'>Insta</span><span class='contactspuzzles'>gram</span></span></a> / 
+					<a href='https://musescore.com/izzhafeez'><span class='contactsmusic'>MuseScore</span></a> / 
+					<a href='mailto:blueticker117@gmail.com'><span class='contactspersonal'>Gmail</span></a> / 
+					<a href='https://www.jetpunk.com/users/zeefahzzi'><span class='contactsinterests'>JetPunk</span></a> / 
+					<a href='https://www.youtube.com/channel/UCbpuVmLLEmLWDlCim2dCgoA'><span class='contactsmusic'>YouTube</span></a> / 
+					<a href='https://www.linkedin.com/in/izzhafeez/'><span class='contactsawards'>LinkedIn</span></a> / 
+					<a href='https://blueticker117.wixsite.com/dontbluetickme'><span class='contactspuzzles'>Old Website</span></a> / 
+					<a href='https://www.youtube.com/watch?v=aRsWk4JZa5k'><span class='contactspersonal'>Tinder</span></a> / 
+					<a href='https://www.duolingo.com/profile/ZeefahZzi'><span class='contactsinterests'>Duolingo</span></a>
+				</p>
+			</section>
+		</section>
+		<section class='fullcontainer'>
+			<section class='tenmarginside'>
+				<p class='small' style='color:white'>© Ask me first before stealing anything hor</p>
+				<p class='small' style='color:white'>Izz Hafeez 2k20</p>
+			</section>
+		</section>
+	</div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+	<title>YouTube</title>
+	<link rel="stylesheet" href="../index.css">
+	<script src='Main Page.js'></script>
+	<link rel='icon' type='image/png' href='../img/Interests Logo.png'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	</head>
+<body>
+	<script>
+		$(document).ready(function(){
+			$('#navbar div:nth-child(3)').click(function() {
+				if ($('#menu').css('display')==='none') {
+					$('#menu').css('display','inline');
+				} else {
+					$('#menu').css('display','none');
+				}
+			})
+			if($(window).scrollTop()>0.5*$(window).width()) {
+				$('.tomove').css({'position':'fixed','top':'0'});
+				$('body:not(.tomove)').css({'margin-top':'10vmin'});
+			} else {
+				$('#navbar').css({'position':'relative','top':'0'});
+				$('#menu').css({'position':'absolute','top':'50vw'});
+				$('body:not(.tomove)').css({'margin-top':'0vmin'});
+			}
+			$(window).on('scroll', function() {
+				if ($(window).scrollTop()>0.5*$(window).width()) {
+					$('.tomove').css({'position':'fixed','top':'0'});
+					$('body:not(.tomove)').css({'margin-top':'10vmin'});
+				} else {
+					$('#navbar').css({'position':'relative','top':'0'});
+					$('#menu').css({'position':'absolute','top':'50vw'});
+					$('body:not(.tomove)').css({'margin-top':'0vmin'});
+				}
+			})
+			var textWrapper = document.querySelector('.ml10 .letters');
+			textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+			anime.timeline({loop: true})
+			  .add({
+			    targets: '.ml10 .letter',
+			    rotateY: [-90, 0],
+			    duration: 13000,
+			    delay: (el, i) => 45 * i
+			  }).add({
+			    targets: '.ml10',
+			    opacity: 0,
+			    duration: 2000,
+			    easing: "easeOutExpo",
+			    delay: 2000
+			  });
+		})
+	</script>
+	<div style="height:50vw; margin:0; background:#202020;">
+		<img src='../img/squareinterests.jpg' style='width:40%; margin-left:30vw; margin-top:5%; position:absolute; display:inline-block; animation:normspin 10s linear infinite; object-fit:cover; border-radius:50%;'>
+		<h1 class="ml10">
+			<span class="text-wrapper">
+				<span class="letters">Interests Site</span>
+			</span>
+		</h1>
+	</div>
+	<div id='navbar' class='tomove'>
+		<a href='../interests.html'><div><img src='../img/navbar3.png'></div></a>
+		<div>YouTube</div>
+		<div><img src='../img/navbar1.png'></div>
+	</div>
+	<div id='menu' class='tomove'>
+		<div style='height:calc(max(10vmin,50px))'></div>
+		<a href='../awards.html' class='menu'><h2>Awards</h2></a>
+		<a href='../interests.html' class='menu' style='background:#3581B8'><h2>Interests</h2></a>
+		<a href='../personal.html' class='menu'><h2>Personal</h2></a>
+		<a href='../music.html' class='menu'><h2>Music</h2></a>
+		<a href='../math.html' class='menu'><h2>Math</h2></a>
+		<a href='../puzzles.html' class='menu'><h2>Puzzles</h2></a>
+	</div>
+	<div class='tencontainer empty blank'>.</div>
+	<div class='eightycontainer'><section class='tenmargin'><img src='headerpic/youtube.jpg' style='width:100%;'></section></div>
+	<div class='tencontainer empty blank'>.</div>
+	<!-- <div class='fullcontainer'></div>
+		<section class='fullcontainer'>
+			<section class='tenmarginside'>
+				<p class='header'>Here are my top 50 favourite Youtube Channels in order</p>
+				<p class='header'><a href='https://www.youtube.com/c/AtlasPro'>1. Atlas Pro (Geography)</a></p>
+				<p class='small'>I cannot stress how much I love this Geography channel. With high production quality and interesting hypothetical questions, this is one of my favourite channels overall. I truly enjoy the explanations that the channel gives, exploring sections of Geography I never knew existed. It is my number one source of inspiration for doing my own research.</p>
+				<p class='header'><a href='https://www.youtube.com/channel/UCIGl_6GmKR7fPRBBDDRcR0Q'>2. Rainimator (Animation)</a></p>
+				<p class='small'>Music video after music video, Rainimator produces top quality minecraft animations, all following a single, coherent story arc. This has been going on since July 2017 and the animation quality is continuously getting better. Full of action and well-timed scenes, I fully support his work. Awesome songs by blacklite district too!</p>
+				<p class='header'><a href='https://www.youtube.com/user/Artifexian'>3. Artifexian (Astrophysics)</a></p>
+				<p class='small'>I'd label Artifexian as Astrophysics as that's what got me interested in the channel in the first place. However, in actuality, everything about the channel spells out WORLDBUILDING. This includes Astrophysics, Geography and Languages. The explanations are very detailed, with apt illustrations and ground-up development of ideas. Terminology and jargon is explained succinctly.</p>
+				<p class='header'><a href='https://www.youtube.com/channel/UCjVwBKqRh8ckPWhfD5UDKcg'>4. Lindie Botes (Language)</a></p>
+				<p class='small'>Language-learning expert at heart, this South-African-born woman living in Singapore is a master at English, Afrikaans, Korean and French, with high proficiency in Spanish, Japanese, Mandarin and Hungarian. A little bit of Vietnamese too. She offers useful language-learning advice and has held talks in the past!</p>
+				<p class='header'><a href='https://www.youtube.com/user/Psych2GoTv'>5. Psych2Go (Psychology)</a></p>
+				<p class='small'>Churning out advice video after advice video, Psych2Go presents Psychology concepts in a digestible way. This community of script writers and animators uploads content that deals with serious issues, disorders, among other things.</p>
+				<p class='header'><a href='https://www.youtube.com/user/Psych2GoTv'>6. 3Blue1Brown</a></p>
+				<p class='small'>Currently the king of maths on YouTube, Grant Sanderson's videos are top-tier.</p>
+				<p class='header'><a href='https://www.youtube.com/user/Vsauce'>7. Vsauce (Knowledge)</a></p>
+				<p class='small'>Vsauce is an old channel. Very old. But it's just that the videos are so intensive. So rewatchable. It's just very interesting overall. Thought experiments, roundabout answers and trivia are strewn about everywhere. But I really like how Michael Stevens is able to segue into other topics he's interested in, without feeling too disjointed.</p>
+			</section>
+		</section>
+	</div> -->
+	<div class='fullcontainer' style='background:#3E4856;'>
+		<!-- <section class='halfcontainer'>
+			<section class='tenmarginside contacts'>
+				<p class='header'>Join the Mailing List!</p>
+				<script>(function(t,e,s,n){var o,a,c;t.SMCX=t.SMCX||[],e.getElementById(n)||(o=e.getElementsByTagName(s),a=o[o.length-1],c=e.createElement(s),c.type="text/javascript",c.async=!0,c.id=n,c.src=["https:"===location.protocol?"https://":"http://","widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgd_2BcEYo8O3z9VnKhrJB6wgHJfp1sXWTlxS580VT9icCxb.js"].join(""),a.parentNode.insertBefore(c,a))})(window,document,"script","smcx-sdk");</script>
+			</section>
+		</section> -->
+		<section class='fullcontainer'>
+			<section class='tenmarginside contacts'>
+				<p class='header'>Contact Me</p>
+				<p>
+					<a href='https://www.instagram.com/mynameizzhafeez/?hl=en'><span class='contactsmath'>Insta</span><span class='contactspuzzles'>gram</span></span></a> / 
+					<a href='https://musescore.com/izzhafeez'><span class='contactsmusic'>MuseScore</span></a> / 
+					<a href='mailto:blueticker117@gmail.com'><span class='contactspersonal'>Gmail</span></a> / 
+					<a href='https://www.jetpunk.com/users/zeefahzzi'><span class='contactsinterests'>JetPunk</span></a> / 
+					<a href='https://www.youtube.com/channel/UCbpuVmLLEmLWDlCim2dCgoA'><span class='contactsmusic'>YouTube</span></a> / 
+					<a href='https://www.linkedin.com/in/izzhafeez/'><span class='contactsawards'>LinkedIn</span></a> / 
+					<a href='https://blueticker117.wixsite.com/dontbluetickme'><span class='contactspuzzles'>Old Website</span></a> / 
+					<a href='https://www.youtube.com/watch?v=aRsWk4JZa5k'><span class='contactspersonal'>Tinder</span></a> / 
+					<a href='https://www.duolingo.com/profile/ZeefahZzi'><span class='contactsinterests'>Duolingo</span></a>
+				</p>
+			</section>
+		</section>
+		<section class='fullcontainer'>
+			<section class='tenmarginside'>
+				<p class='small' style='color:white'>© Ask me first before stealing anything hor</p>
+				<p class='small' style='color:white'>Izz Hafeez 2k20</p>
+			</section>
+		</section>
+	</div>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+	<title>Interests</title>
+	<link rel="stylesheet" href="index.css">
+	<script src='Main Page.js'></script>
+	<link rel='icon' type='image/png' href='img/Interests Logo.png'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	</head>
+<body>
+	<script>
+		$(document).ready(function(){
+			$('#navbar div:nth-child(3)').click(function() {
+				if ($('#menu').css('display')==='none') {
+					$('#menu').css('display','inline');
+				} else {
+					$('#menu').css('display','none');
+				}
+			})
+			if($(window).scrollTop()>0.5*$(window).width()) {
+				$('.tomove').css({'position':'fixed','top':'0'});
+				$('body:not(.tomove)').css({'margin-top':'10vmin'});
+			} else {
+				$('#navbar').css({'position':'relative','top':'0'});
+				$('#menu').css({'position':'absolute','top':'50vw'});
+				$('body:not(.tomove)').css({'margin-top':'0vmin'});
+			}
+			$(window).on('scroll', function() {
+				if ($(window).scrollTop()>0.5*$(window).width()) {
+					$('.tomove').css({'position':'fixed','top':'0'});
+					$('body:not(.tomove)').css({'margin-top':'10vmin'});
+				} else {
+					$('#navbar').css({'position':'relative','top':'0'});
+					$('#menu').css({'position':'absolute','top':'50vw'});
+					$('body:not(.tomove)').css({'margin-top':'0vmin'});
+				}
+			})
+			var textWrapper = document.querySelector('.ml10 .letters');
+			textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+			anime.timeline({loop: true})
+			  .add({
+			    targets: '.ml10 .letter',
+			    rotateY: [-90, 0],
+			    duration: 13000,
+			    delay: (el, i) => 45 * i
+			  }).add({
+			    targets: '.ml10',
+			    opacity: 0,
+			    duration: 2000,
+			    easing: "easeOutExpo",
+			    delay: 2000
+			  });
+		})
+	</script>
+	<div style="height:50vw; margin:0; background:#202020;">
+		<img src='img/squareinterests.jpg' style='width:40%; margin-left:30vw; margin-top:5%; position:absolute; display:inline-block; animation:normspin 10s linear infinite; object-fit:cover; border-radius:50%;'>
+		<h1 class="ml10">
+			<span class="text-wrapper">
+				<span class="letters">Interests Site</span>
+			</span>
+		</h1>
+	</div>
+	<div id='navbar' class='tomove'>
+		<a href='index.html'><div><img src='img/navbar2.png'></div></a>
+		<div>Interests</div>
+		<div><img src='img/navbar1.png'></div>
+	</div>
+	<div id='menu' class='tomove'>
+		<div style='height:calc(max(10vmin,50px))'></div>
+		<a href='awards.html' class='menu'><h2>Awards</h2></a>
+		<a href='interests.html' class='menu' style='background:#3581B8'><h2>Interests</h2></a>
+		<a href='personal.html' class='menu'><h2>Personal</h2></a>
+		<a href='music.html' class='menu'><h2>Music</h2></a>
+		<a href='math.html' class='menu'><h2>Math</h2></a>
+		<a href='puzzles.html' class='menu'><h2>Puzzles</h2></a>
+	</div>
+	<div class='fivecontainer blank empty'>.</div>
+	<div class='ninetycontainer'>
+		<section class='tenmargin'><p class='header'>About the Site<hr></p><p>In pursuit of self-improvement, I always find myself picking up new hobbies and interests to pass the time. People often catch me doing random things and asking why. To that, my response has always been 'Why not?'. After all, there is much to learn. From the outer reaches of <span style='color:#3581B8'>space</span>, to the inner workings of the quantum world, one can never finish learning. Here are some of the topics that piqued my interest over the years, sharing relevant resources along the way.</p></section>
+		<section class='nomargin'>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='interests/timeline.html'><img src='interests/headerpic/timeline.jpg' style='width:70%;box-shadow:0px 5px 0px #3581B8' class='imghover'></a>
+					<p class='subheader'>Timeline of interests</p><p class='small'>Like many people, my interests change drastically over time. Nevertheless, I hold some of them much closer than others.</p><p><a href='interests/timeline.html'>Visit Site >></a></p>
+				</section>
+			</section>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='interests/youtube.html'><img src='interests/headerpic/youtube.jpg' style='width:70%;box-shadow:0px 5px 0px #3581B8' class='imghover'></a>
+					<p class='subheader'>Youtube</p><p class='small'>All my interests tie into Youtube pretty well. Although I do read scholarly articles and research papers quite often, Youtube has been the place I get interested in many topics. In fact, I am subscribed to over 800 channels currently! Throughout this site, I share some of my many channel recommendations.</p><p><a href='interests/youtube.html'>Visit Site >></a></p>
+				</section>
+			</section>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='interests/languages.html'><img src='interests/headerpic/languages.jpg' style='width:70%;box-shadow:0px 5px 0px #3581B8' class='imghover'></a>
+					<p class='subheader'>Languages</p><p class='small'>I am not so sociable. But I do love learning new languages. Be it programming or spoken or non-spoken, I love exploring the different ways a particular idea can be articulated.</p>
+				</section>
+			</section>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='interests/geography.html'><img src='interests/headerpic/geography.jpg' style='width:70%;box-shadow:0px 5px 0px #3581B8' class='imghover'></a>
+					<p class='subheader'>Geography</p><p class='small'>Geography has been a long time friend of mine. It forms the ever-essential bridge between astronomy and linguistics, a vital role that literally shapes the world around us. </p><p><a href='interests/geography.html'>Visit Site >></a></p>
+				</section>
+			</section>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='interests/astronomy.html'><img src='interests/headerpic/astronomy.jpg' style='width:70%;box-shadow:0px 5px 0px #3581B8' class='imghover'></a>
+					<p class='subheader'>Astronomy</p><p class='small'>In the heavens, there are plenty stars. Some very big stars, some very small stars. Some not so big stars, some not so small stars.</p><p><a href='interests/astronomy.html'>Visit Site >></a></p>
+				</section>
+			</section>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='music.html'><img src='music/headerpic/music.jpg' style='width:70%;box-shadow:0px 5px 0px #D88B37' class='imghover'></a>
+					<p class='subheader'>Music</p><p class='small'>I've been into music for several portions of my life. From playing Piano to singing in a Choir, my music efforts shifted. Now, I compose and transcribe music, posting my work online.</p><p><a href='music.html'>Visit Site >></a></p>
+				</section>
+			</section>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='math.html'><img src='math/headerpic/math.jpg' style='width:70%;box-shadow:0px 5px 0px #06BA63' class='imghover'></a>
+					<p class='subheader'>Math</p><p class='small'>A sizeable portion of my time in 2017-2018 was spent playing around with graphs on the Desmos app, a tool I often use today, designing graphs and such.</p><p><a href='music.html'>Visit Site >></a></p>
+				</section>
+			</section>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='interests/photoshop.html'><img src='interests/headerpic/photoshop.jpg' style='width:70%;box-shadow:0px 5px 0px #3581B8' class='imghover'></a>
+					<p class='subheader'>Photoshop</p><p class='small'>I've only just started getting into photoshop not too long ago, photoshopping my friends in ridiculous fashions. But I also use it to further my other interests.</p><p><a href='interests/photoshop.html'>Visit Site >></a></p>
+				</section>
+			</section>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='interests/gaming.html'><img src='interests/headerpic/gaming.jpg' style='width:70%;box-shadow:0px 5px 0px #3581B8' class='imghover'></a>
+					<p class='subheader'>Gaming</p><p class='small'>Of course, gaming has played an important role in my life. Be it mobile, console or pc, gaming holds a special place in my heart, just like many people.</p><p><a href='interests/gaming.html'>Visit Site >></a></p>
+				</section>
+			</section>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='interests/memorisation.html'><img src='interests/headerpic/memorisation.jpg' style='width:70%;box-shadow:0px 5px 0px #3581B8' class='imghover'></a>
+					<p class='subheader'>Memorisation</p><p class='small'>I need to keep my mind in shape and memorisation seems to be a relaxing way to do it. The kinds of memorisation I do are mostly pointless and useless but somehow they seems to be satisfying every time.</p><p><a href='interests/memorisation.html'>Visit Site >></a></p>
+				</section>
+			</section>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='interests/dinosaurs.html'><img src='interests/headerpic/dinosaurs.jpg' style='width:70%;box-shadow:0px 5px 0px #3581B8' class='imghover'></a>
+					<p class='subheader'>Dinosaurs</p><p class='small'>Many boys have had a dinosaur phase in their life. Mine just happened to go a little overboard.</p><p><a href='interests/dinosaurs.html'>Visit Site >></a></p>
+				</section>
+			</section>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='interests/photography.html'><img src='interests/headerpic/photography.jpg' style='width:70%;box-shadow:0px 5px 0px #3581B8' class='imghover'></a>
+					<p class='subheader'>Photography</p><p class='small'>Most people have some interest in photography. The categories are endless. But the kind I like to do is background photography.</p><p><a href='interests/photography.html'>Visit Site >></a></p>
+				</section>
+			</section>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='interests/quizzes.html'><img src='interests/headerpic/quizzes.jpg' style='width:70%;box-shadow:0px 5px 0px #3581B8' class='imghover'></a>
+					<p class='subheader'>Quizzes</p><p class='small'>I'm constantly testing my understanding and memory. So I take quizzes on Jetpunk, Sporcle and Geoguessr regularly.</p><p><a href='interests/quizzes.html'>Visit Site >></a></p>
+				</section>
+			</section>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='interests/chemistry.html'><img src='interests/headerpic/chemistry.jpg' style='width:70%;box-shadow:0px 5px 0px #3581B8' class='imghover'></a>
+					<p class='subheader'>Chemistry</p><p class='small'>I started to like chemistry way before I liked any of the other sciences. Memorising the periodic table by age 9, I enjoyed reading encyclopaedias on it.</p><p><a href='interests/chemistry.html'>Visit Site >></a></p>
+				</section>
+			</section>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='interests/memes.html'><img src='interests/headerpic/memes.jpg' style='width:70%;box-shadow:0px 5px 0px #3581B8' class='imghover'></a>
+					<p class='subheader'>Memes / Reddit</p><p class='small'>Who doesn't love memes? We all have our own methods of receiving our daily dose of memes. Here are mine.</p><p><a href='interests/memes.html'>Visit Site >></a></p>
+				</section>
+			</section>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='interests/tv.html'><img src='interests/headerpic/tv.jpg' style='width:70%;box-shadow:0px 5px 0px #3581B8' class='imghover'></a>
+					<p class='subheader'>TV / Netflix / Movies</p><p class='small'>TV also makes up a big chunk of my life. Here are some of my most memorable ones.</p><p><a href='interests/tv.html'>Visit Site >></a></p>
+				</section>
+			</section>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='interests/misc.html'><img src='interests/headerpic/misc.jpg' style='width:70%;box-shadow:0px 5px 0px #3581B8' class='imghover'></a>
+					<p class='subheader'>Miscellaneous</p><p class='small'>There are many many more small interests that I've developed over the years. I'll just dump them here.</p><p><a href='interests/misc.html'>Visit Site >></a></p>
+				</section>
+			</section>
+		</section>
+	</div>
+	<div class='fullcontainer' style='background:#3E4856;'>
+		<!-- <section class='halfcontainer'>
+			<section class='tenmarginside contacts'>
+				<p class='header'>Join the Mailing List!</p>
+				<script>(function(t,e,s,n){var o,a,c;t.SMCX=t.SMCX||[],e.getElementById(n)||(o=e.getElementsByTagName(s),a=o[o.length-1],c=e.createElement(s),c.type="text/javascript",c.async=!0,c.id=n,c.src=["https:"===location.protocol?"https://":"http://","widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgd_2BcEYo8O3z9VnKhrJB6wgHJfp1sXWTlxS580VT9icCxb.js"].join(""),a.parentNode.insertBefore(c,a))})(window,document,"script","smcx-sdk");</script>
+			</section>
+		</section> -->
+		<section class='fullcontainer'>
+			<section class='tenmarginside contacts'>
+				<p class='header'>Contact Me</p>
+				<p>
+					<a href='https://www.instagram.com/mynameizzhafeez/?hl=en'><span class='contactsmath'>Insta</span><span class='contactspuzzles'>gram</span></span></a> / 
+					<a href='https://musescore.com/izzhafeez'><span class='contactsmusic'>MuseScore</span></a> / 
+					<a href='mailto:blueticker117@gmail.com'><span class='contactspersonal'>Gmail</span></a> / 
+					<a href='https://www.jetpunk.com/users/zeefahzzi'><span class='contactsinterests'>JetPunk</span></a> / 
+					<a href='https://www.youtube.com/channel/UCbpuVmLLEmLWDlCim2dCgoA'><span class='contactsmusic'>YouTube</span></a> / 
+					<a href='https://www.linkedin.com/in/izzhafeez/'><span class='contactsawards'>LinkedIn</span></a> / 
+					<a href='https://blueticker117.wixsite.com/dontbluetickme'><span class='contactspuzzles'>Old Website</span></a> / 
+					<a href='https://www.youtube.com/watch?v=aRsWk4JZa5k'><span class='contactspersonal'>Tinder</span></a> / 
+					<a href='https://www.duolingo.com/profile/ZeefahZzi'><span class='contactsinterests'>Duolingo</span></a>
+				</p>
+			</section>
+		</section>
+		<section class='fullcontainer'>
+			<section class='tenmarginside'>
+				<p class='small' style='color:white'>© Ask me first before stealing anything hor</p>
+				<p class='small' style='color:white'>Izz Hafeez 2k20</p>
+			</section>
+		</section>
+	</div>
+</body>
+</html>
