@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+	<title>Timeline</title>
+	<link rel="stylesheet" href="../index.css">
+	<script src='Main Page.js'></script>
+	<link rel='icon' type='image/png' href='../img/Interests Logo.png'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	</head>
+<body>
+	<script>
+		$(document).ready(function(){
+			$('#navbar div:nth-child(3)').click(function() {
+				if ($('#menu').css('display')==='none') {
+					$('#menu').css('display','inline');
+				} else {
+					$('#menu').css('display','none');
+				}
+			})
+			if($(window).scrollTop()>0.5*$(window).width()) {
+				$('.tomove').css({'position':'fixed','top':'0'});
+				$('body:not(.tomove)').css({'margin-top':'10vmin'});
+			} else {
+				$('#navbar').css({'position':'relative','top':'0'});
+				$('#menu').css({'position':'absolute','top':'50vw'});
+				$('body:not(.tomove)').css({'margin-top':'0vmin'});
+			}
+			$(window).on('scroll', function() {
+				if ($(window).scrollTop()>0.5*$(window).width()) {
+					$('.tomove').css({'position':'fixed','top':'0'});
+					$('body:not(.tomove)').css({'margin-top':'10vmin'});
+				} else {
+					$('#navbar').css({'position':'relative','top':'0'});
+					$('#menu').css({'position':'absolute','top':'50vw'});
+					$('body:not(.tomove)').css({'margin-top':'0vmin'});
+				}
+			})
+			var textWrapper = document.querySelector('.ml10 .letters');
+			textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+			anime.timeline({loop: true})
+			  .add({
+			    targets: '.ml10 .letter',
+			    rotateY: [-90, 0],
+			    duration: 13000,
+			    delay: (el, i) => 45 * i
+			  }).add({
+			    targets: '.ml10',
+			    opacity: 0,
+			    duration: 2000,
+			    easing: "easeOutExpo",
+			    delay: 2000
+			  });
+		})
+	</script>
+	<div style="height:50vw; margin:0; background:#202020;">
+		<img src='../img/squareinterests.jpg' style='width:40%; margin-left:30vw; margin-top:5%; position:absolute; display:inline-block; animation:normspin 10s linear infinite; object-fit:cover; border-radius:50%;'>
+		<h1 class="ml10">
+			<span class="text-wrapper">
+				<span class="letters">Interests Site</span>
+			</span>
+		</h1>
+	</div>
+	<div id='navbar' class='tomove'>
+		<a href='../interests.html'><div><img src='../img/navbar3.png'></div></a>
+		<div>Timeline</div>
+		<div><img src='../img/navbar1.png'></div>
+	</div>
+	<div id='menu' class='tomove'>
+		<div style='height:calc(max(10vmin,50px))'></div>
+		<a href='../awards.html' class='menu'><h2>Awards</h2></a>
+		<a href='../interests.html' class='menu' style='background:#3581B8'><h2>Interests</h2></a>
+		<a href='../personal.html' class='menu'><h2>Personal</h2></a>
+		<a href='../music.html' class='menu'><h2>Music</h2></a>
+		<a href='../math.html' class='menu'><h2>Math</h2></a>
+		<a href='../puzzles.html' class='menu'><h2>Puzzles</h2></a>
+	</div>
+	<div class='tencontainer empty blank'>.</div>
+	<div class='eightycontainer'><section class='tenmargin'><img src='headerpic/timeline.jpg' style='width:100%;'></section></div>
+	<div class='tencontainer empty blank'>.</div>
+	<div class='halfcontainer'>
+		<section class='tenmarginside'>
+			<p class='header'>Timeline of interests<hr></p>
+			<p>My parents bought for me several series of childrens' encyclopaedias when I was little (about the age of 4). Looking through all of them, quite a few stuck out for me:</p>
+			<p><a href='geography.html'><span style='color:#2a6793'>Geography</span></a>: One was an atlas world map. Broken up into the various subcontinents of the world, the atlas details the countries, their flags, capital and land area, all of which were very fun to see.</p>
+			<p><a href='astronomy.html'><span style='color:#2a6793'>Astronomy</span></a>: Another was a book on Stars and Planets. Here, I got to know the bare basics of Astronomy. From my second favourite Saturnian moon (Mimas) to my favourite galaxy (Hoag's Object), I enjoyed exploring the extraordinary.</p>
+			<p><a href='dinosaurs.html'><span style='color:#2a6793'>Dinosaurs</span></a>: Of course, dinosaurs piqued my interest very easily. I recall quite a bit of my time was spent memorising the dinosaurs' names, famous ones being the Pachycephalosaurus and the Parasaurolophus.</p>
+			<p>Other books like the history of cars and ancient civilisations also caught my attention. But I don't remember my passion being realised.</p>
+			<br>
+			<p><a href='../music.html'><span style='color:#9c6428'>Music</span></a>: Aged 5, my parents enrolled me in piano lessons at Yamaha. I don't remember liking my time there but it was the foundation of what was to come.</p>
+			<p><a href='../math.html'><span style='color:#058647'>Math</span></a>: At the same time, I went for math enrichment classes, focussing not on math per se, but more on fun and engaging <a href='../puzzles.html'><span style='color:#837a2a'>logical challenges</span></a>. I very much enjoyed those classes.</p>
+			<p><a href='gaming.html'><span style='color:#2a6793'>Gaming</span></a>: One of the most memorable games I played when young was Halo. Playing with cousins was definitely the most fun I have in the year. But game preferences change over time.</p>
+			<br>
+			<p>I'd say that all the ones mentioned above are my core interests. Nodes that will later branch off into my entire network of interconnected interests.</p>
+			<br>
+			<p>Primary 3 came and I was motivated to improve myself. I intensely diversified and specialised during this time.</p>
+			<p><a href='chemistry.html'><span style='color:#2a6793'>Chemistry</span></a>: Reading up on rock formations, I was captivated by the long chemical formulae of the minerals involved. Of course, I ended up getting into Chemistry.</p>
+			<p><a href='memorisation.html'><span style='color:#2a6793'>Memorisation</span></a>: Eventually, I memorised most of the world's countries (minus the caribbean, oceania and the stans) as well as the periodic table.</p>
+			<p>[INCOMPLETE]</p>
+		</section>		
+	</div>
+	<div class='halfcontainer'>
+		<section class='tenmarginside'>
+			<p class='header'>Quick summary<hr></p>
+			<p>Number of asterisks indicates how important the interest is to me :)</p>
+			<ul>
+				<li><p>[2004] <a href='geography.html'>Geography</a> [5*]</p></li>
+				<li><p>[2004] <a href='astronomy.html'>Astronomy</a> [4*]</p></li>
+				<li><p>[2004] <a href='dinosaurs.html'>Dinosaurs</a> [1*]</p></li>
+				<li><p>[2005] <a href='../music.html'>Performing Music</a> [1*]</p></li>
+				<li><p>[2005] <a href='../math.html'>Math</a> [4*]</p></li>
+				<li><p>[2005] <a href='gaming.html'>Gaming</a> [3*]</p></li>
+				<li><p>[2009] <a href='chemistry.html'>Chemistry</a> [2*]</p></li>
+				<li><p>[2009] <a href='memorisation.html'>Memorisation</a> [2*]</a></p></li>
+				<li><p>[2009] <a href='photography.html'>Photography</a> [1*]</p></li>
+				<li><p>[2015] <a href='languages.html'>Languages</a> [5*]</p></li>
+				<li><p>[2017] <a href='../math/graphs.html'>Graphing</a> [4*]</p></li>
+				<li><p>[2017] <a href='photoshop.html'>Photoshop</a> [2*]</p></li>
+				<li><p>[2018] <a href='../puzzles.html'>Puzzles</a> [3*]</p></li>
+				<li><p>[2019] <a href='../music/originals.html'>Composing</a> [4*]</p></li>	
+				<li><p>[2019] <a href='../music/transcriptions.html'>Transcriptions</a> [2*]</p></li>	
+			</ul>
+		</section>
+	</div>
+	<div class='fivecontainer blank empty'>.</div>
+	<div class='fullcontainer' style='background:#3E4856;'>
+		<!-- <section class='halfcontainer'>
+			<section class='tenmarginside contacts'>
+				<p class='header'>Join the Mailing List!</p>
+				<script>(function(t,e,s,n){var o,a,c;t.SMCX=t.SMCX||[],e.getElementById(n)||(o=e.getElementsByTagName(s),a=o[o.length-1],c=e.createElement(s),c.type="text/javascript",c.async=!0,c.id=n,c.src=["https:"===location.protocol?"https://":"http://","widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgd_2BcEYo8O3z9VnKhrJB6wgHJfp1sXWTlxS580VT9icCxb.js"].join(""),a.parentNode.insertBefore(c,a))})(window,document,"script","smcx-sdk");</script>
+			</section>
+		</section> -->
+		<section class='fullcontainer'>
+			<section class='tenmarginside contacts'>
+				<p class='header'>Contact Me</p>
+				<p>
+					<a href='https://www.instagram.com/mynameizzhafeez/?hl=en'><span class='contactsmath'>Insta</span><span class='contactspuzzles'>gram</span></span></a> / 
+					<a href='https://musescore.com/izzhafeez'><span class='contactsmusic'>MuseScore</span></a> / 
+					<a href='mailto:blueticker117@gmail.com'><span class='contactspersonal'>Gmail</span></a> / 
+					<a href='https://www.jetpunk.com/users/zeefahzzi'><span class='contactsinterests'>JetPunk</span></a> / 
+					<a href='https://www.youtube.com/channel/UCbpuVmLLEmLWDlCim2dCgoA'><span class='contactsmusic'>YouTube</span></a> / 
+					<a href='https://www.linkedin.com/in/izzhafeez/'><span class='contactsawards'>LinkedIn</span></a> / 
+					<a href='https://blueticker117.wixsite.com/dontbluetickme'><span class='contactspuzzles'>Old Website</span></a> / 
+					<a href='https://www.youtube.com/watch?v=aRsWk4JZa5k'><span class='contactspersonal'>Tinder</span></a> / 
+					<a href='https://www.duolingo.com/profile/ZeefahZzi'><span class='contactsinterests'>Duolingo</span></a>
+				</p>
+			</section>
+		</section>
+		<section class='fullcontainer'>
+			<section class='tenmarginside'>
+				<p class='small' style='color:white'>© Ask me first before stealing anything hor</p>
+				<p class='small' style='color:white'>Izz Hafeez 2k20</p>
+			</section>
+		</section>
+	</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+	<title>Geography Favourites</title>
+	<link rel="stylesheet" href="../../index.css">
+	<script src='Main Page.js'></script>
+	<link rel='icon' type='image/png' href='../../img/Logo.png'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	</head>
+<body>
+	<script>
+		$(document).ready(function() {
+			$('#navbar div:nth-child(3)').click(function() {
+				if($('#menu').css('display')==='none') {
+					$('#menu').css('display','inline');
+				} else {
+					$('#menu').css('display','none');
+				}
+			})
+		})
+	</script>
+	<div id='navbar'>
+		<a href='../geography.html'><div><img src='../../img/navbar3.png'></div></a>
+		<div>Favourites</div>
+		<div><img src='../../img/navbar1.png'></div>
+	</div>
+	<div id='menu'>
+		<div style='height:0'></div>
+		<a href='../awards.html' class='menu'><h2>Awards</h2></a>
+		<a href='../interests.html' class='menu' style='background:#3581B8'><h2>Interests</h2></a>
+		<a href='../personal.html' class='menu'><h2>Personal</h2></a>
+		<a href='../music.html' class='menu'><h2>Music</h2></a>
+		<a href='../math.html' class='menu'><h2>Math</h2></a>
+		<a href='../puzzles.html' class='menu'><h2>Puzzles</h2></a>
+	</div>
+</body>
+</html>

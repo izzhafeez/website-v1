@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+	<title>Medleys</title>
+	<link rel="stylesheet" href="../index.css">
+	<script src='Main Page.js'></script>
+	<link rel='icon' type='image/png' href='../img/Music Logo.png'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	</head>
+<body>
+	<script>
+		$(document).ready(function(){
+			$('#navbar div:nth-child(3)').click(function() {
+				if ($('#menu').css('display')==='none') {
+					$('#menu').css('display','inline');
+				} else {
+					$('#menu').css('display','none');
+				}
+			})
+			if($(window).scrollTop()>0.5*$(window).width()) {
+				$('.tomove').css({'position':'fixed','top':'0'});
+				$('body:not(.tomove)').css({'margin-top':'10vmin'});
+			} else {
+				$('#navbar').css({'position':'relative','top':'0'});
+				$('#menu').css({'position':'absolute','top':'50vw'});
+				$('body:not(.tomove)').css({'margin-top':'0vmin'});
+			}
+			$(window).on('scroll', function() {
+				if ($(window).scrollTop()>0.5*$(window).width()) {
+					$('.tomove').css({'position':'fixed','top':'0'});
+					$('body:not(.tomove)').css({'margin-top':'10vmin'});
+				} else {
+					$('#navbar').css({'position':'relative','top':'0'});
+					$('#menu').css({'position':'absolute','top':'50vw'});
+					$('body:not(.tomove)').css({'margin-top':'0vmin'});
+				}
+			})
+			var textWrapper = document.querySelector('.ml10 .letters');
+			textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+			anime.timeline({loop: true})
+			  .add({
+			    targets: '.ml10 .letter',
+			    rotateY: [-90, 0],
+			    duration: 13000,
+			    delay: (el, i) => 45 * i
+			  }).add({
+			    targets: '.ml10',
+			    opacity: 0,
+			    duration: 2000,
+			    easing: "easeOutExpo",
+			    delay: 2000
+			  });
+		})
+	</script>
+	<div style="height:50vw; margin:0; background:#202020;">
+		<img src='../img/squaremusic.jpg' style='width:40%; margin-left:30vw; margin-top:5%; position:absolute; display:inline-block; animation:normspin 10s linear infinite; object-fit:cover; border-radius:50%;'>
+		<h1 class="ml10">
+			<span class="text-wrapper">
+				<span class="letters">Music Site</span>
+			</span>
+		</h1>
+	</div>
+	<div id='navbar' class='tomove'>
+		<a href='../music.html'><div><img src='../img/navbar3.png'></div></a>
+		<div>Medleys</div>
+		<div><img src='../img/navbar1.png'></div>
+	</div>
+	<div id='menu' class='tomove'>
+		<div style='height:calc(max(10vmin,50px))'></div>
+		<a href='../awards.html' class='menu'><h2>Awards</h2></a>
+		<a href='../interests.html' class='menu'><h2>Interests</h2></a>
+		<a href='../personal.html' class='menu'><h2>Personal</h2></a>
+		<a href='../music.html' class='menu' style='background:#D88B37'><h2>Music</h2></a>
+		<a href='../math.html' class='menu'><h2>Math</h2></a>
+		<a href='../puzzles.html' class='menu'><h2>Puzzles</h2></a>
+	</div>
+	<div class='tencontainer empty blank'>.</div>
+	<div class='eightycontainer'><section class='tenmargin'><img src='headerpic/medleys.jpg' style='width:100%;'></section></div>
+	<div class='tencontainer empty blank'>.</div>
+	<div class='fullcontainer'>
+		<section class='tencontainer blank empty'>.</section>
+		<section class='eightycontainer'>
+			<section class='tenmarginside'><p class='header'>About the Site<hr></p>
+				<p>I spend quite a bit of time on the piano coming up with medleys. It's a 2-pronged process for me. The first way is by using coding. I have a csv file containing a select number of songs from my extended playlist. By using some urllib and shady manipulation, I was able to get the various chord progressions of different songs. Sorting by BPM, I have a coherent flow of songs to follow in the chord-centric medleys. My second method is the accidental method, for I often go on 'transcribing sprees', where I pick out any random song and start playing it by ear. Eventually, this led me to smoothly transition into other songs.</p>
+			</section>
+			<section class='tenmarginside songscontainer'>
+				<button class='songbutton' onclick='if ($(".songpopupback:nth-child(1)").css("display") === "none") {$(".songpopupback:nth-child(1)").css("display","inline");} else {$(".songpopupback:nth-child(1)").css("display","none");}'>
+					<p class='subheader'>NDP Medley</p>
+					<p class='small'>20 songs, 12 mins</p>
+				</button>
+				<button class='songbutton' onclick='if ($(".songpopupback:nth-child(2)").css("display") === "none") {$(".songpopupback:nth-child(2)").css("display","inline");} else {$(".songpopupback:nth-child(2)").css("display","none");}'>
+					<p class='subheader'>FCGAm</p>
+					<p class='small'>31 songs, 16 mins</p>
+				</button>
+				<button class='songbutton' onclick='if ($(".songpopupback:nth-child(3)").css("display") === "none") {$(".songpopupback:nth-child(3)").css("display","inline");} else {$(".songpopupback:nth-child(3)").css("display","none");}'>
+					<p class='subheader'>AmFCG</p>
+					<p class='small'>52 songs, 27 mins</p>
+				</button>
+				<button class='songbutton' onclick='if ($(".songpopupback:nth-child(4)").css("display") === "none") {$(".songpopupback:nth-child(4)").css("display","inline");} else {$(".songpopupback:nth-child(4)").css("display","none");}'>
+					<p class='subheader'>Duet Mashup</p>
+					<p class='small'>9 songs, 6 mins</p>
+				</button>
+				<!-- <button class='songbutton' onclick='if ($(".songpopupback:nth-child(5)").css("display") === "none") {$(".songpopupback:nth-child(5)").css("display","inline");} else {$(".songpopupback:nth-child(5)").css("display","none");}'>
+					<p class='subheader'>Alone Part II</p>
+					<p class='small'>Alan Walker & Ava Max</p>
+				</button>
+				<button class='songbutton' onclick='if ($(".songpopupback:nth-child(6)").css("display") === "none") {$(".songpopupback:nth-child(6)").css("display","inline");} else {$(".songpopupback:nth-child(6)").css("display","none");}'>
+					<p class='subheader'>Torn</p>
+					<p class='small'>Ava Max</p>
+				</button>
+				<button class='songbutton' onclick='if ($(".songpopupback:nth-child(7)").css("display") === "none") {$(".songpopupback:nth-child(7)").css("display","inline");} else {$(".songpopupback:nth-child(7)").css("display","none");}'>
+					<p class='subheader'>everything I wanted</p>
+					<p class='small'>Billie Eyelash</p>
+				</button>
+				<button class='songbutton' onclick='if ($(".songpopupback:nth-child(8)").css("display") === "none") {$(".songpopupback:nth-child(8)").css("display","inline");} else {$(".songpopupback:nth-child(8)").css("display","none");}'>
+					<p class='subheader'>The Last Time</p>
+					<p class='small'>The Script</p>
+				</button>
+				<button class='songbutton' onclick='if ($(".songpopupback:nth-child(9)").css("display") === "none") {$(".songpopupback:nth-child(9)").css("display","inline");} else {$(".songpopupback:nth-child(9)").css("display","none");}'>
+					<p class='subheader'>What's Wrong</p>
+					<p class='small'>Eric Chou</p>
+				</button>
+				<button class='songbutton' onclick='if ($(".songpopupback:nth-child(10)").css("display") === "none") {$(".songpopupback:nth-child(10)").css("display","inline");} else {$(".songpopupback:nth-child(10)").css("display","none");}'>
+					<p class='subheader'>Unity</p>
+					<p class='small'>Alan x Walkers</p>
+				</button>
+				<button class='songbutton' onclick='if ($(".songpopupback:nth-child(11)").css("display") === "none") {$(".songpopupback:nth-child(11)").css("display","inline");} else {$(".songpopupback:nth-child(11)").css("display","none");}'>
+					<p class='subheader'>Bad Liar</p>
+					<p class='small'>Imagine Dragons</p>
+				</button>
+				<button class='songbutton' onclick='if ($(".songpopupback:nth-child(12)").css("display") === "none") {$(".songpopupback:nth-child(12)").css("display","inline");} else {$(".songpopupback:nth-child(12)").css("display","none");}'>
+					<p class='subheader'>Rewrite the Stars</p>
+					<p class='small'>Troy & Zendaya</p>
+				</button>
+				<button class='songbutton' onclick='if ($(".songpopupback:nth-child(13)").css("display") === "none") {$(".songpopupback:nth-child(13)").css("display","inline");} else {$(".songpopupback:nth-child(13)").css("display","none");}'>
+					<p class='subheader'>July</p>
+					<p class='small'>Miley's sister</p>
+				</button>
+				<button class='songbutton' onclick='if ($(".songpopupback:nth-child(14)").css("display") === "none") {$(".songpopupback:nth-child(14)").css("display","inline");} else {$(".songpopupback:nth-child(14)").css("display","none");}'>
+					<p class='subheader'>Desert Moon</p>
+					<p class='small'>Naomi Scott & friend</p>
+				</button>
+				<button class='songbutton' onclick='if ($(".songpopupback:nth-child(15)").css("display") === "none") {$(".songpopupback:nth-child(15)").css("display","inline");} else {$(".songpopupback:nth-child(15)").css("display","none");}'>
+					<p class='subheader'>Let Her Go</p>
+					<p class='small'>Pedestrian</p>
+				</button>
+				<button class='songbutton' onclick='if ($(".songpopupback:nth-child(16)").css("display") === "none") {$(".songpopupback:nth-child(16)").css("display","inline");} else {$(".songpopupback:nth-child(16)").css("display","none");}'>
+					<p class='subheader'>Innocence</p>
+					<p class='small'>Avril Delevine</p>
+				</button> -->
+			</section>
+			<section>
+				<section class='songpopupback'>
+					<div class='songnavbar'>
+						<div>NDP Medley</div>
+						<div onclick='if ($(".songpopupback:nth-child(1)").css("display") === "none") {$(".songpopupback:nth-child(1)").css("display","inline");} else {$(".songpopupback:nth-child(1)").css("display","none");}'><img src='../img/navbar4.png'></div></div>
+					<div class='songpopup'>
+						<section class='fullcontainer'>
+							<section class='tenmargin'>
+								<p class='small'>Quite alot to say about this piece, but not here. You can find the description in the links below. But this is the culmination of my theory knowledge thus far, along with the various embellishments and modulations I made along the way. My favourite part to play would the false buildup to Home. This section is where I used the almighty Sharp 1 in the VI chord, a chord I truly enjoy hearing. Other than that, a few 9th extensions were made as well as an 11th extension.</p>
+								<!-- <p class='small'>Instructions to play: I understand that the left hand might be a little tricky. So just remove the top notes of the left hand part (if you listen to the song, you kinda see which part I'm referring to)</p> -->
+								<a href='https://musescore.com/izzhafeez/ndp-piano-medley'><p class='small'>MuseScore >></p></a>
+								<a href='https://www.youtube.com/watch?v=4WWADSU9240'><p class='small'>YouTube >></p></a>
+								<a href="scores/NDP Medley.pdf" download><p class='small'>PDF >></p></a>
+								<a href="scores/NDP Medley.mp3" download><p class='small'>MP3 >></p></a>
+								<a href="scores/NDP Medley.mscz" download><p class='small'>MSCZ >></p></a>
+							</section>
+						</section>
+					</div>
+				</section>
+				<section class='songpopupback'>
+					<div class='songnavbar'>
+						<div>FCGAm</div>
+						<div onclick='if ($(".songpopupback:nth-child(2)").css("display") === "none") {$(".songpopupback:nth-child(2)").css("display","inline");} else {$(".songpopupback:nth-child(2)").css("display","none");}'><img src='../img/navbar4.png'></div></div>
+					<div class='songpopup'>
+						<section class='fullcontainer'>
+							<section class='tenmargin'>
+								<p class='small'>This was quite fun to make, since many of my favourite songs fall under this category. Centralised around the Lydian mode of the Major scale, the progression has a very uplifting and positive feel to it, although the mood can change quite a bit.</p>
+								<!-- <p class='small'>Instructions to play: Apart from the YouTube and MuseScore version, the song is comprised of two halves. The first half is a piano solo while the second half is meant for vocals with piano accompaniment. Not so good on the vocals part but hey I tried ok.</p> -->
+								<a href='https://musescore.com/izzhafeez/journey-through-lydia'><p class='small'>MuseScore >></p></a>
+								<a href='https://www.youtube.com/watch?v=hpug5lztvmw'><p class='small'>YouTube >></p></a>
+								<a href="scores/FCGAm Medley.pdf" download><p class='small'>PDF >></p></a>
+								<a href="scores/FCGAm Medley.mp3" download><p class='small'>MP3 >></p></a>
+								<a href="scores/FCGAm Medley.mscz" download><p class='small'>MSCZ >></p></a>
+							</section>
+						</section>
+					</div>
+				</section>
+				<section class='songpopupback'>
+					<div class='songnavbar'>
+						<div>AmFCG</div>
+						<div onclick='if ($(".songpopupback:nth-child(3)").css("display") === "none") {$(".songpopupback:nth-child(3)").css("display","inline");} else {$(".songpopupback:nth-child(3)").css("display","none");}'><img src='../img/navbar4.png'></div></div>
+					<div class='songpopup'>
+						<section class='fullcontainer'>
+							<section class='tenmargin'>
+								<p class='small'>Definitely my longest piece. I spent a good 2 months creating this, coming up with suitable transitions and mashups. However, looking back at it, I don't really like what I've done to it. Probably shouldn't have wasted so much time on this, since nobody is going to look at it anyway.</p>
+								<!-- <p class='small'>Instructions to play: There are many moments where you have to syncopate intensely. Sometimes, there is no choice. But there are still times when I sacrificed playability for the sake of making the piece sound complete. I just can't play all these complicated rhythms :(</p> -->
+								<a href='https://musescore.com/izzhafeez/scores/5693546'><p class='small'>MuseScore >></p></a>
+								<a href='https://www.youtube.com/watch?v=2HRxXgxso4A'><p class='small'>YouTube >></p></a>
+								<a href="scores/Medley.pdf" download><p class='small'>PDF >></p></a>
+								<a href="scores/Medley.mp3" download><p class='small'>MP3 >></p></a>
+								<a href="scores/Medley.mscz" download><p class='small'>MSCZ >></p></a>
+							</section>
+						</section>
+					</div>
+				</section>
+				<section class='songpopupback'>
+					<div class='songnavbar'>
+						<div>Duet Medley</div>
+						<div onclick='if ($(".songpopupback:nth-child(4)").css("display") === "none") {$(".songpopupback:nth-child(4)").css("display","inline");} else {$(".songpopupback:nth-child(4)").css("display","none");}'><img src='../img/navbar4.png'></div></div>
+					<div class='songpopup'>
+						<section class='fullcontainer'>
+							<section class='tenmargin'>
+								<p class='small'>A duet comprising of multiple melodies at the same time~~</p>
+								<!-- <p class='small'>Instructions to play: Left hand no choice have to play like that :(</p> -->
+								<a href='https://musescore.com/izzhafeez/eight-iu-feat-suga-of-bts'><p class='small'>MuseScore >></p></a>
+								<!-- <a href='https://www.youtube.com/watch?v=OAsKGUN5On4'><p class='small'>YouTube >></p></a> -->
+								<a href="scores/Eight.pdf" download><p class='small'>PDF >></p></a>
+								<a href="scores/Eight.mp3" download><p class='small'>MP3 >></p></a>
+								<a href="scores/Eight.mscz" download><p class='small'>MSCZ >></p></a>
+							</section>
+						</section>
+					</div>
+				</section>
+				<section class='songpopupback'>
+					<div class='songnavbar'>
+						<div>Alone Part II</div>
+						<div onclick='if ($(".songpopupback:nth-child(5)").css("display") === "none") {$(".songpopupback:nth-child(5)").css("display","inline");} else {$(".songpopupback:nth-child(5)").css("display","none");}'><img src='../img/navbar4.png'></div></div>
+					<div class='songpopup'>
+						<section class='fullcontainer'>
+							<section class='tenmargin'>
+								<p class='small'>One time playthrough wasn't enough for me to transcribe this. But using some logic, the pieces actually fit quite well into this song. vi-V-ii-vi-IV-I-V is quite a cool progression to have. I always love the IV chord when it becomes the semi-resolution point in the progression!</p>
+								<p class='small'>Instructions to play: My left hand gets tired very quickly so gotta just brave through it. </p>
+								<a href='https://musescore.com/izzhafeez/alone-part-ii'><p class='small'>MuseScore >></p></a>
+								<a href='https://www.youtube.com/watch?v=vpc8njKxAKM'><p class='small'>YouTube >></p></a>
+								<a href="scores/Alone Part II.pdf" download><p class='small'>PDF >></p></a>
+								<a href="scores/Alone Part II.mp3" download><p class='small'>MP3 >></p></a>
+								<a href="scores/Alone Part II.mscz" download><p class='small'>MSCZ >></p></a>
+							</section>
+						</section>
+					</div>
+				</section>
+				<section class='songpopupback'>
+					<div class='songnavbar'>
+						<div>Torn</div>
+						<div onclick='if ($(".songpopupback:nth-child(6)").css("display") === "none") {$(".songpopupback:nth-child(6)").css("display","inline");} else {$(".songpopupback:nth-child(6)").css("display","none");}'><img src='../img/navbar4.png'></div></div>
+					<div class='songpopup'>
+						<section class='fullcontainer'>
+							<section class='tenmargin'>
+								<p class='small'>The ABBA feeling is strong in this one! TBH I went way too far overboard with the harmonisation in this one, seeing as though I was into Jacob Collier's music at the time. I saw this mistake and decided to tone it down alot for subsequent pieces. I'm gonna stand by my judgement to include the glisses though :) The chords weren't too complicated, with IV-ii-vi-V filling up the chorus.</p>
+								<p class='small'>Instructions to play: If the jumps are too big, you can just take smaller ones. Just adjust the notes according to the chord.</p>
+								<a href='https://musescore.com/izzhafeez/torn-ava-max'><p class='small'>MuseScore >></p></a>
+								<a href='https://www.youtube.com/watch?v=pZUUW-H5g6k'><p class='small'>YouTube >></p></a>
+								<a href="scores/Torn.pdf" download><p class='small'>PDF >></p></a>
+								<a href="scores/Torn.mp3" download><p class='small'>MP3 >></p></a>
+								<a href="scores/Torn.mscz" download><p class='small'>MSCZ >></p></a>
+							</section>
+						</section>
+					</div>
+				</section>
+				<section class='songpopupback'>
+					<div class='songnavbar'>
+						<div>everything I wanted</div>
+						<div onclick='if ($(".songpopupback:nth-child(7)").css("display") === "none") {$(".songpopupback:nth-child(7)").css("display","inline");} else {$(".songpopupback:nth-child(7)").css("display","none");}'><img src='../img/navbar4.png'></div></div>
+					<div class='songpopup'>
+						<section class='fullcontainer'>
+							<section class='tenmargin'>
+								<p class='small'>I don't really like this song. There's only like one semi-interesting portion of the song but that's about it. I mainly did this song because I thought the score would get views. This song was announced beforehand, so I had time to prepare beforehand. I ended up finishing the score in 1h. However, due to some complications, the YouTube score needed like another 3 hours to post. More still, people were already posting covers 30 minutes after the song release.</p>
+								<p class='small'>Instructions to play: Nothing lol.</p>
+								<a href='https://musescore.com/izzhafeez/everything-i-wanted-billie-eilish'><p class='small'>MuseScore >></p></a>
+								<a href='https://www.youtube.com/watch?v=i5XZWNFnQlU'><p class='small'>YouTube >></p></a>
+								<a href="scores/everything I wanted.pdf" download><p class='small'>PDF >></p></a>
+								<a href="scores/everything I wanted.mp3" download><p class='small'>MP3 >></p></a>
+								<a href="scores/everything I wanted.mscz" download><p class='small'>MSCZ >></p></a>
+							</section>
+						</section>
+					</div>
+				</section>
+				<section class='songpopupback'>
+					<div class='songnavbar'>
+						<div>The Last Time</div>
+						<div onclick='if ($(".songpopupback:nth-child(8)").css("display") === "none") {$(".songpopupback:nth-child(8)").css("display","inline");} else {$(".songpopupback:nth-child(8)").css("display","none");}'><img src='../img/navbar4.png'></div></div>
+					<div class='songpopup'>
+						<section class='fullcontainer'>
+							<section class='tenmargin'>
+								<p class='small'>I've liked The Script for quite a long time, with memorable songs like Breakeven and Man who could not be moved still being in my playlist. Although the chord progression is plainly simple, it was very fun to improvise on the prechorus I-V-vi-IV, especially when I really accented the low notes. epic.</p>
+								<p class='small'>Instructions to play: The jumps are quite big on this one so maybe some light pedalling should work big time.</p>
+								<a href='https://musescore.com/izzhafeez/the-last-time'><p class='small'>MuseScore >></p></a>
+								<a href='https://www.youtube.com/watch?v=JGePErnf3jU'><p class='small'>YouTube >></p></a>
+								<a href="scores/The Last Time.pdf" download><p class='small'>PDF >></p></a>
+								<a href="scores/The Last Time.mp3" download><p class='small'>MP3 >></p></a>
+								<a href="scores/The Last Time.mscz" download><p class='small'>MSCZ >></p></a>
+							</section>
+						</section>
+					</div>
+				</section>
+				<section class='songpopupback'>
+					<div class='songnavbar'>
+						<div>What's Wrong (怎麼了）</div>
+						<div onclick='if ($(".songpopupback:nth-child(9)").css("display") === "none") {$(".songpopupback:nth-child(9)").css("display","inline");} else {$(".songpopupback:nth-child(9)").css("display","none");}'><img src='../img/navbar4.png'></div></div>
+					<div class='songpopup'>
+						<section class='fullcontainer'>
+							<section class='tenmargin'>
+								<p class='small'>这支歌很棒！主要旋律尽管挺简单，我很感激这种钢琴部分。Chord progression is also pretty interesting at times but mostly remains tame.</p>
+								<p class='small'>Instructions to play: This is meant for vocals with piano accompaniment.</p>
+								<a href='https://musescore.com/izzhafeez/scores/5691171'><p class='small'>MuseScore >></p></a>
+								<a href='https://www.youtube.com/watch?v=v_S2RnRSLoc'><p class='small'>YouTube >></p></a>
+								<a href="scores/What's Wrong.pdf" download><p class='small'>PDF >></p></a>
+								<a href="scores/What's Wrong.mp3" download><p class='small'>MP3 >></p></a>
+								<a href="scores/What's Wrong.mscz" download><p class='small'>MSCZ >></p></a>
+							</section>
+						</section>
+					</div>
+				</section>
+				<section class='songpopupback'>
+					<div class='songnavbar'>
+						<div>Unity</div>
+						<div onclick='if ($(".songpopupback:nth-child(10)").css("display") === "none") {$(".songpopupback:nth-child(10)").css("display","inline");} else {$(".songpopupback:nth-child(10)").css("display","none");}'><img src='../img/navbar4.png'></div></div>
+					<div class='songpopup'>
+						<section class='fullcontainer'>
+							<section class='tenmargin'>
+								<p class='small'>This was one of the first times I experimented with the melody itself, adding the semiquaver nonsense at the end, along with some retrospectively awkward harmonisations.</p>
+								<p class='small'>Instructions to play: No comment.</p>
+								<a href='https://musescore.com/izzhafeez/unity-alan-walker'><p class='small'>MuseScore >></p></a>
+								<a href='https://www.youtube.com/watch?v=L0cRQSmNYls'><p class='small'>YouTube >></p></a>
+								<a href="scores/Unity.pdf" download><p class='small'>PDF >></p></a>
+								<a href="scores/Unity.mp3" download><p class='small'>MP3 >></p></a>
+								<a href="scores/Unity.mscz" download><p class='small'>MSCZ >></p></a>
+							</section>
+						</section>
+					</div>
+				</section>
+				<section class='songpopupback'>
+					<div class='songnavbar'>
+						<div>Bad Liar</div>
+						<div onclick='if ($(".songpopupback:nth-child(11)").css("display") === "none") {$(".songpopupback:nth-child(11)").css("display","inline");} else {$(".songpopupback:nth-child(11)").css("display","none");}'><img src='../img/navbar4.png'></div></div>
+					<div class='songpopup'>
+						<section class='fullcontainer'>
+							<section class='tenmargin'>
+								<p class='small'>Wahhh this one is hard to play. I can't seem to get any of the timings right for the left hand. That compounded with the large jumps makes this piece pretty hard. Still, the prechorus is very simple yet powerful, following the vi-IV-I-V progression.</p>
+								<p class='small'>Instructions to play: Just play with power for the prechorus (I like playing that part).</p>
+								<a href='https://musescore.com/izzhafeez/bad-liar-imagine-dragons'><p class='small'>MuseScore >></p></a>
+								<a href='https://www.youtube.com/watch?v=UNK6bLcbynA'><p class='small'>YouTube >></p></a>
+								<a href="scores/Bad Liar.pdf" download><p class='small'>PDF >></p></a>
+								<a href="scores/Bad Liar.mp3" download><p class='small'>MP3 >></p></a>
+								<a href="scores/Bad Liar.mscz" download><p class='small'>MSCZ >></p></a>
+							</section>
+						</section>
+					</div>
+				</section>
+				<section class='songpopupback'>
+					<div class='songnavbar'>
+						<div>Rewrite the Stars</div>
+						<div onclick='if ($(".songpopupback:nth-child(12)").css("display") === "none") {$(".songpopupback:nth-child(12)").css("display","inline");} else {$(".songpopupback:nth-child(12)").css("display","none");}'><img src='../img/navbar4.png'></div></div>
+					<div class='songpopup'>
+						<section class='fullcontainer'>
+							<section class='tenmargin'>
+								<p class='small'>My second piece ever! I tried to be a little more inventive for my second piece. However, looking back at it, the secondary melodies I added don't make sense at all. But hey I tried.</p>
+								<p class='small'>Instructions to play: The final chorus just ignore the unnecessary notes.</p>
+								<a href='https://musescore.com/izzhafeez/scores/5440191'><p class='small'>MuseScore >></p></a>
+								<a href='https://www.youtube.com/watch?v=Yrs6EQCxmgE'><p class='small'>YouTube >></p></a>
+								<a href="scores/Rewrite the Stars.pdf" download><p class='small'>PDF >></p></a>
+								<a href="scores/Rewrite the Stars.mp3" download><p class='small'>MP3 >></p></a>
+								<a href="scores/Rewrite the Stars.mscz" download><p class='small'>MSCZ >></p></a>
+							</section>
+						</section>
+					</div>
+				</section>
+				<section class='songpopupback'>
+					<div class='songnavbar'>
+						<div>July</div>
+						<div onclick='if ($(".songpopupback:nth-child(13)").css("display") === "none") {$(".songpopupback:nth-child(13)").css("display","inline");} else {$(".songpopupback:nth-child(13)").css("display","none");}'><img src='../img/navbar4.png'></div></div>
+					<div class='songpopup'>
+						<section class='fullcontainer'>
+							<section class='tenmargin'>
+								<p class='small'>Somebody once told me to make this score. So I did.</p>
+								<p class='small'>Instructions to play: Nothing really.</p>
+								<a href='https://musescore.com/izzhafeez/july-noah-cyrus'><p class='small'>MuseScore >></p></a>
+								<a href='https://www.youtube.com/watch?v=zGX778a05d8'><p class='small'>YouTube >></p></a>
+								<a href="scores/July.pdf" download><p class='small'>PDF >></p></a>
+								<a href="scores/July.mp3" download><p class='small'>MP3 >></p></a>
+								<a href="scores/July.mscz" download><p class='small'>MSCZ >></p></a>
+							</section>
+						</section>
+					</div>
+				</section>
+				<section class='songpopupback'>
+					<div class='songnavbar'>
+						<div>Desert Moon</div>
+						<div onclick='if ($(".songpopupback:nth-child(14)").css("display") === "none") {$(".songpopupback:nth-child(14)").css("display","inline");} else {$(".songpopupback:nth-child(14)").css("display","none");}'><img src='../img/navbar4.png'></div></div>
+					<div class='songpopup'>
+						<section class='fullcontainer'>
+							<section class='tenmargin'>
+								<p class='small'>Disney released this unreleased song so why not right?</p>
+								<p class='small'>Instructions to play: No comment.</p>
+								<a href='https://musescore.com/izzhafeez/scores/5691388'><p class='small'>MuseScore >></p></a>
+								<a href='https://www.youtube.com/watch?v=lcpR7WMlke0'><p class='small'>YouTube >></p></a>
+								<a href="scores/Desert Moon.pdf" download><p class='small'>PDF >></p></a>
+								<a href="scores/Desert Moon.mp3" download><p class='small'>MP3 >></p></a>
+								<a href="scores/Desert Moon.mscz" download><p class='small'>MSCZ >></p></a>
+							</section>
+						</section>
+					</div>
+				</section>
+				<section class='songpopupback'>
+					<div class='songnavbar'>
+						<div>Let Her Go</div>
+						<div onclick='if ($(".songpopupback:nth-child(15)").css("display") === "none") {$(".songpopupback:nth-child(15)").css("display","inline");} else {$(".songpopupback:nth-child(15)").css("display","none");}'><img src='../img/navbar4.png'></div></div>
+					<div class='songpopup'>
+						<section class='fullcontainer'>
+							<section class='tenmargin'>
+								<p class='small'>This was one of my favourite songs of 2012-2013. Very recognisable from any part of the song. Nice chorus tune too (IV-I-V-vi is my favourite of the basic-chord progressions).</p>
+								<p class='small'>Instructions to play: No comment.</p>
+								<a href='https://musescore.com/izzhafeez/let-her-go'><p class='small'>MuseScore >></p></a>
+								<a href='https://www.youtube.com/watch?v=uwztT2MpTR8'><p class='small'>YouTube >></p></a>
+								<a href="scores/Let Her Go.pdf" download><p class='small'>PDF >></p></a>
+								<a href="scores/Let Her Go.mp3" download><p class='small'>MP3 >></p></a>
+								<a href="scores/Let Her Go.mscz" download><p class='small'>MSCZ >></p></a>
+							</section>
+						</section>
+					</div>
+				</section>
+				<section class='songpopupback'>
+					<div class='songnavbar'>
+						<div>Innocence</div>
+						<div onclick='if ($(".songpopupback:nth-child(16)").css("display") === "none") {$(".songpopupback:nth-child(16)").css("display","inline");} else {$(".songpopupback:nth-child(16)").css("display","none");}'><img src='../img/navbar4.png'></div></div>
+					<div class='songpopup'>
+						<section class='fullcontainer'>
+							<section class='tenmargin'>
+								<p class='small'>Innocence is my second favourite Avril Lavigne song and was one of my favourites growing up in Secondary School. So I decided to make this. The chorus is always very nostalgic so I decided to emphasise on that part quite alot.</p>
+								<p class='small'>Instructions to play: Play gently. And use light pedalling wherever possible.</p>
+								<a href='https://musescore.com/izzhafeez/innocence-avril-lavigne'><p class='small'>MuseScore >></p></a>
+								<a href='https://www.youtube.com/watch?v=329TFWcp9JI'><p class='small'>YouTube >></p></a>
+								<a href="scores/Innocence.pdf" download><p class='small'>PDF >></p></a>
+								<a href="scores/Innocence.mp3" download><p class='small'>MP3 >></p></a>
+								<a href="scores/Innocence.mscz" download><p class='small'>MSCZ >></p></a>
+							</section>
+						</section>
+					</div>
+				</section>
+			</section>
+		</section>
+		<section class='tencontainer blank empty'>.</section>
+	</div>
+	<div class='fullcontainer' style='background:#3E4856;'>
+		<!-- <section class='halfcontainer'>
+			<section class='tenmarginside contacts'>
+				<p class='header'>Join the Mailing List!</p>
+				<script>(function(t,e,s,n){var o,a,c;t.SMCX=t.SMCX||[],e.getElementById(n)||(o=e.getElementsByTagName(s),a=o[o.length-1],c=e.createElement(s),c.type="text/javascript",c.async=!0,c.id=n,c.src=["https:"===location.protocol?"https://":"http://","widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgd_2BcEYo8O3z9VnKhrJB6wgHJfp1sXWTlxS580VT9icCxb.js"].join(""),a.parentNode.insertBefore(c,a))})(window,document,"script","smcx-sdk");</script>
+			</section>
+		</section> -->
+		<section class='fullcontainer'>
+			<section class='tenmarginside contacts'>
+				<p class='header'>Contact Me</p>
+				<p>
+					<a href='https://www.instagram.com/mynameizzhafeez/?hl=en'><span class='contactsmath'>Insta</span><span class='contactspuzzles'>gram</span></span></a> / 
+					<a href='https://musescore.com/izzhafeez'><span class='contactsmusic'>MuseScore</span></a> / 
+					<a href='mailto:blueticker117@gmail.com'><span class='contactspersonal'>Gmail</span></a> / 
+					<a href='https://www.jetpunk.com/users/zeefahzzi'><span class='contactsinterests'>JetPunk</span></a> / 
+					<a href='https://www.youtube.com/channel/UCbpuVmLLEmLWDlCim2dCgoA'><span class='contactsmusic'>YouTube</span></a> / 
+					<a href='https://www.linkedin.com/in/izzhafeez/'><span class='contactsawards'>LinkedIn</span></a> / 
+					<a href='https://blueticker117.wixsite.com/dontbluetickme'><span class='contactspuzzles'>Old Website</span></a> / 
+					<a href='https://www.youtube.com/watch?v=aRsWk4JZa5k'><span class='contactspersonal'>Tinder</span></a> / 
+					<a href='https://www.duolingo.com/profile/ZeefahZzi'><span class='contactsinterests'>Duolingo</span></a>
+				</p>
+			</section>
+		</section>
+		<section class='fullcontainer'>
+			<section class='tenmarginside'>
+				<p class='small' style='color:white'>© Ask me first before stealing anything hor</p>
+				<p class='small' style='color:white'>Izz Hafeez 2k20</p>
+			</section>
+		</section>
+	</div>
+</body>
+</html>

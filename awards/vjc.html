@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+	<title>Victoria JC</title>
+	<link rel="stylesheet" href="../index.css">
+	<script src='Main Page.js'></script>
+	<link rel='icon' type='image/png' href='../img/Awards Logo.png'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	</head>
+<body>
+	<script>
+		$(document).ready(function(){
+			$('#navbar div:nth-child(3)').click(function() {
+				if ($('#menu').css('display')==='none') {
+					$('#menu').css('display','inline');
+				} else {
+					$('#menu').css('display','none');
+				}
+			})
+			if($(window).scrollTop()>0.5*$(window).width()) {
+				$('.tomove').css({'position':'fixed','top':'0'});
+				$('body:not(.tomove)').css({'margin-top':'10vmin'});
+			} else {
+				$('#navbar').css({'position':'relative','top':'0'});
+				$('#menu').css({'position':'absolute','top':'50vw'});
+				$('body:not(.tomove)').css({'margin-top':'0vmin'});
+			}
+			$(window).on('scroll', function() {
+				if ($(window).scrollTop()>0.5*$(window).width()) {
+					$('.tomove').css({'position':'fixed','top':'0'});
+					$('body:not(.tomove)').css({'margin-top':'10vmin'});
+				} else {
+					$('#navbar').css({'position':'relative','top':'0'});
+					$('#menu').css({'position':'absolute','top':'50vw'});
+					$('body:not(.tomove)').css({'margin-top':'0vmin'});
+				}
+			})
+			var textWrapper = document.querySelector('.ml10 .letters');
+			textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+			anime.timeline({loop: true})
+			  .add({
+			    targets: '.ml10 .letter',
+			    rotateY: [-90, 0],
+			    duration: 13000,
+			    delay: (el, i) => 45 * i
+			  }).add({
+			    targets: '.ml10',
+			    opacity: 0,
+			    duration: 2000,
+			    easing: "easeOutExpo",
+			    delay: 2000
+			  });
+		})
+	</script>
+	<div style="height:50vw; margin:0; background:#202020;">
+		<img src='../img/squareawards.jpg' style='width:40%; margin-left:30vw; margin-top:5%; position:absolute; display:inline-block; animation:normspin 10s linear infinite; object-fit:cover; border-radius:50%;'>
+		<h1 class="ml10">
+			<span class="text-wrapper">
+				<span class="letters">Awards Site</span>
+			</span>
+		</h1>
+	</div>
+	<div id='navbar' class='tomove'>
+		<a href='../awards.html'><div><img src='../img/navbar3.png'></div></a>
+		<div>Junior College</div>
+		<div><img src='../img/navbar1.png'></div>
+	</div>
+	<div id='menu' class='tomove'>
+		<div style='height:calc(max(10vmin,50px))'></div>
+		<a href='awards.html' class='menu' style='background:#8332AC'><h2>Awards</h2></a>
+		<a href='interests.html' class='menu'><h2>Interests</h2></a>
+		<a href='personal.html' class='menu'><h2>Personal</h2></a>
+		<a href='music.html' class='menu'><h2>Music</h2></a>
+		<a href='math.html' class='menu'><h2>Math</h2></a>
+		<a href='puzzles.html' class='menu'><h2>Puzzles</h2></a>
+	</div>
+	<div class='tencontainer empty blank'>.</div>
+	<div class='eightycontainer'><section class='tenmargin'><img src='headerpic/vjc.jpg' style='width:100%;'></section></div>
+	<div class='tencontainer empty blank'>.</div>
+	<div class='sixtycontainer'>
+		<section class='tenmarginside'>
+			<p class='subheader' style='color:#8332AC'>Victoria Junior College<hr></p>
+			<p>This was most likely the most relaxed phase of my schooling life. Nothing particularly unfortunate happened to me during this era. So I could focus on what I was interested in, aka my <a href='../interests.html'><span style='color:#2a6793'>interests</span></a>.</p>
+			<p>Taking Further Math and H3 Math, I got exposed to lots of new formulas and ideas which are very cool! But more on that <a href='../math/studies.html'><span style='color:#058647'>here</span></a>.</p>
+			<p>Apart from the continuous stream of math certificates, I found great pride in one of my interests: <a href='../math/graphs.html'><span style='color:#058647'>Graphing</span></a>. This hobby of mine eventually led me to earning $500, for getting a Gold Award!
+			<p>I was competition-hungry these two years, striving to participate in as many events as possible. Unfortunately, high goals often means high disappointment. For 4 of the competitions, I was genuinely heartbroken.</p>
+			<ol>
+				<li><p>The first in the streak of losses was <a href='../interests/physics.html'><span style='color:#2a6793'>Physics</span></a> Olympiad. With only one chance to participate, I focussed lots of my attention onto it. But wow it was hard. Just opening the paper was enough to make the whole lecture room laugh.</p></li>
+				<li><p>Next up was Informatics Olympiad, which tests one's ability to generate algorithms to big-brain, complex problems. I personally don't think I was far off from getting a single award from that. A 68/500 was the best I could do.</p></li>
+				<li><p>Afterwards was the Singapore International Mathematics Competition. Two of my classmates and I were sent to represent VJC in this stay-in competition hosted by NUS. Again, had lots of confidence in our submission but ultimately, nada.</p></li>
+				<li><p>Finally, Math Olympiad. This was the one that hurt the most. All my life, I've gotten a flurry of Bronzes and Silvers for this particular competition. I wanted so desperately to get just one Gold. One last chance to do it. Hais.</p></li>
+			</ol>
+			<p>I was also the Programming Head of the Robotics Club so that was fun I guess. More on that <a href='personal.html'><span style='color:#8332AC'>here</span></a>.</p>
+		</section>
+	</div>
+	<div class='fortycontainer'>
+		<section class='tenmarginside'>
+			<p class='subheader' style='color:#8332AC'>Awards<hr></p>
+			<p class='subheader'>2017</p>
+			<ul>
+				<li><p>SMO (<span style='color:#696969'>Silver</span>)</p></li>
+				<li><p>Euclid Contest (<span style='color:#837a2a'>Distinction</span>)</p></li>
+				<li><p>Australian Math Competition (<span style='color:#696969'>Distinction</span>)</p></li>
+				<li><p>TI-84 Graphing Competition (<span style='color:#696969'>Silver</span>)</p></li>
+				<li><p>South East Asian Mathematical Olympiad (<span style='color:#5c171c'>Bronze</span>)</p></li>
+			</ul>
+			<p class='subheader'>2018</p>
+			<ul>
+				<li><p>SMO (<span style='color:#696969'>Silver</span>)</p></li>
+				<li><p>Euclid Contest (<span style='color:#837a2a'>Distinction</span>)</p></li>
+				<li><p>Australian Math Competition (<span style='color:#837a2a'>High Distinction</span>)</p></li>
+				<li><p>TI-84 Graphing Competition (<span style='color:#837a2a'>Gold</span>)</p></li>
+			</ul>
+		</section>
+	</div>
+	<div class='fivecontainer blank empty'>.</div>
+	<div class='fullcontainer' style='background:#3E4856;'>
+		<!-- <section class='halfcontainer'>
+			<section class='tenmarginside contacts'>
+				<p class='header'>Join the Mailing List!</p>
+				<script>(function(t,e,s,n){var o,a,c;t.SMCX=t.SMCX||[],e.getElementById(n)||(o=e.getElementsByTagName(s),a=o[o.length-1],c=e.createElement(s),c.type="text/javascript",c.async=!0,c.id=n,c.src=["https:"===location.protocol?"https://":"http://","widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgd_2BcEYo8O3z9VnKhrJB6wgHJfp1sXWTlxS580VT9icCxb.js"].join(""),a.parentNode.insertBefore(c,a))})(window,document,"script","smcx-sdk");</script>
+			</section>
+		</section> -->
+		<section class='fullcontainer'>
+			<section class='tenmarginside contacts'>
+				<p class='header'>Contact Me</p>
+				<p>
+					<a href='https://www.instagram.com/mynameizzhafeez/?hl=en'><span class='contactsmath'>Insta</span><span class='contactspuzzles'>gram</span></span></a> / 
+					<a href='https://musescore.com/izzhafeez'><span class='contactsmusic'>MuseScore</span></a> / 
+					<a href='mailto:blueticker117@gmail.com'><span class='contactspersonal'>Gmail</span></a> / 
+					<a href='https://www.jetpunk.com/users/zeefahzzi'><span class='contactsinterests'>JetPunk</span></a> / 
+					<a href='https://www.youtube.com/channel/UCbpuVmLLEmLWDlCim2dCgoA'><span class='contactsmusic'>YouTube</span></a> / 
+					<a href='https://www.linkedin.com/in/izzhafeez/'><span class='contactsawards'>LinkedIn</span></a> / 
+					<a href='https://blueticker117.wixsite.com/dontbluetickme'><span class='contactspuzzles'>Old Website</span></a> / 
+					<a href='https://www.youtube.com/watch?v=aRsWk4JZa5k'><span class='contactspersonal'>Tinder</span></a> / 
+					<a href='https://www.duolingo.com/profile/ZeefahZzi'><span class='contactsinterests'>Duolingo</span></a>
+				</p>
+			</section>
+		</section>
+		<section class='fullcontainer'>
+			<section class='tenmarginside'>
+				<p class='small' style='color:white'>© Ask me first before stealing anything hor</p>
+				<p class='small' style='color:white'>Izz Hafeez 2k20</p>
+			</section>
+		</section>
+	</div>
+</body>
+</html>

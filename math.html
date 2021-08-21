@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+	<title>My Name Izz Hafeez</title>
+	<link rel="stylesheet" href="index.css">
+	<script src='Main Page.js'></script>
+	<link rel='icon' type='image/png' href='img/Logo.png'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	</head>
+<body>
+	<script>
+		$(document).ready(function(){
+			$('#navbar div:nth-child(3)').click(function() {
+				if ($('#menu').css('display')==='none') {
+					$('#menu').css('display','inline');
+				} else {
+					$('#menu').css('display','none');
+				}
+			})
+			if($(window).scrollTop()>0.5*$(window).width()) {
+				$('.tomove').css({'position':'fixed','top':'0'});
+				$('body:not(.tomove)').css({'margin-top':'10vmin'});
+			} else {
+				$('#navbar').css({'position':'relative','top':'0'});
+				$('#menu').css({'position':'absolute','top':'50vw'});
+				$('body:not(.tomove)').css({'margin-top':'0vmin'});
+			}
+			$(window).on('scroll', function() {
+				if ($(window).scrollTop()>0.5*$(window).width()) {
+					$('.tomove').css({'position':'fixed','top':'0'});
+					$('body:not(.tomove)').css({'margin-top':'10vmin'});
+				} else {
+					$('#navbar').css({'position':'relative','top':'0'});
+					$('#menu').css({'position':'absolute','top':'50vw'});
+					$('body:not(.tomove)').css({'margin-top':'0vmin'});
+				}
+			})
+			var textWrapper = document.querySelector('.ml10 .letters');
+			textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+			anime.timeline({loop: true})
+			  .add({
+			    targets: '.ml10 .letter',
+			    rotateY: [-90, 0],
+			    duration: 13000,
+			    delay: (el, i) => 45 * i
+			  }).add({
+			    targets: '.ml10',
+			    opacity: 0,
+			    duration: 2000,
+			    easing: "easeOutExpo",
+			    delay: 2000
+			  });
+		})
+	</script>
+	<div style="height:50vw; margin:0; background:#202020;">
+		<img src='img/squaremath.jpg' style='width:40%; margin-left:30vw; margin-top:5%; position:absolute; display:inline-block; animation:normspin 10s linear infinite; object-fit:cover; border-radius:50%;'>
+		<h1 class="ml10">
+			<span class="text-wrapper">
+				<span class="letters">Math site</span>
+			</span>
+		</h1>
+	</div>
+	<div id='navbar' class='tomove'>
+		<a href='index.html'><div><img src='img/navbar2.png'></div></a>
+		<div>Math</div>
+		<div><img src='img/navbar1.png'></div>
+	</div>
+	<div id='menu' class='tomove'>
+		<div style='height:calc(max(10vmin,50px))'></div>
+		<a href='awards.html' class='menu'><h2>Awards</h2></a>
+		<a href='interests.html' class='menu'><h2>Interests</h2></a>
+		<a href='personal.html' class='menu'><h2>Personal</h2></a>
+		<a href='music.html' class='menu'><h2>Music</h2></a>
+		<a href='math.html' class='menu' style='background:#06BA63'><h2>Math</h2></a>
+		<a href='puzzles.html' class='menu'><h2>Puzzles</h2></a>
+	</div>
+	<div class='fivecontainer blank empty'>.</div>
+	<div class='ninetycontainer'>
+		<section class='tenmargin'><p class='header'>About the Site<hr></p><p>Math has always been my strong suit. Taking Further Maths in JC and earning multiple awards in Math competitions, I like maths. A sizeable portion of my <span style='color:#06BA63'>time</span> in 2017-2018 was spent playing around with graphs on the Desmos app, a tool I often use today, designing graphs and such.</p></section>
+		<section class='nomargin'>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='math/techniques.html'><img src='math/headerpic/techniques.jpg' style='width:70%;box-shadow:0px 5px 0px #06BA63' class='imghover'></a>
+					<p class='subheader'>Techniques</p><p class='small'>I've been using a vast array of new skills and techniques to output better-looking artwork. From specific formulas to in-app shortcuts, here are some of the tips and tricks I have to offer for graphing, primarily Desmos.</p><p><a href='math/techniques.html'>Visit Site >></a></p>
+				</section>
+			</section>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='math/art.html'><img src='math/headerpic/art.jpg' style='width:70%;box-shadow:0px 5px 0px #06BA63' class='imghover'></a>
+					<p class='subheader'>Art</p><p class='small'>I've been on Desmos since 2017, creating simple art works back then. Crafting simpler formulas to perform various art tasks like colouring, shading and cutting. All that culminated to my obtaining of the Gold Award for the Texas Instruments Graphing Competiton in 2018. After that, in 2019, I began posting my artwork to my Instagram, utilising more intensive formulae and concepts to design more intricate pieces of artwork.</p><p><a href='math/art.html'>Visit Site >></a></p>
+				</section>
+			</section>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='math/problems.html'><img src='math/headerpic/problems.jpg' style='width:70%;box-shadow:0px 5px 0px #06BA63' class='imghover'></a>
+					<p class='subheader'>Problems</p><p class='small'>Over the years, I've come up with many Math Problems on my own. While most of them have been lost to the can of rubbish, I think I remember some of my most memorable ones. Be prepared for some physics ones as well.</p><p><a href='math/problems.html'>Visit Site >></a></p>
+				</section>
+			</section>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='math/youtube.html'><img src='math/headerpic/youtube.jpg' style='width:70%;box-shadow:0px 5px 0px #06BA63' class='imghover'></a>
+					<p class='subheader'>YouTube</p><p class='small'>If you're here, you've probably heard of 3Blue1Brown. But there are many other Math channels out there worth checking as well! Probably not as good as King Grant himself, but yeah! Do check them out if you have the time!</p><p><a href='math/youtube.html'>Visit Site >></a></p>
+				</section>
+			</section>
+		</section>
+	<div class='posts'>
+		<div class='textpost general' style='height:200vmin'>Text goes here</div>
+	</div>
+	<div class='fullcontainer' style='background:#3E4856;'>
+		<!-- <section class='halfcontainer'>
+			<section class='tenmarginside contacts'>
+				<p class='header'>Join the Mailing List!</p>
+				<script>(function(t,e,s,n){var o,a,c;t.SMCX=t.SMCX||[],e.getElementById(n)||(o=e.getElementsByTagName(s),a=o[o.length-1],c=e.createElement(s),c.type="text/javascript",c.async=!0,c.id=n,c.src=["https:"===location.protocol?"https://":"http://","widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgd_2BcEYo8O3z9VnKhrJB6wgHJfp1sXWTlxS580VT9icCxb.js"].join(""),a.parentNode.insertBefore(c,a))})(window,document,"script","smcx-sdk");</script>
+			</section>
+		</section> -->
+		<section class='fullcontainer'>
+			<section class='tenmarginside contacts'>
+				<p class='header'>Contact Me</p>
+				<p>
+					<a href='https://www.instagram.com/mynameizzhafeez/?hl=en'><span class='contactsmath'>Insta</span><span class='contactspuzzles'>gram</span></span></a> / 
+					<a href='https://musescore.com/izzhafeez'><span class='contactsmusic'>MuseScore</span></a> / 
+					<a href='mailto:blueticker117@gmail.com'><span class='contactspersonal'>Gmail</span></a> / 
+					<a href='https://www.jetpunk.com/users/zeefahzzi'><span class='contactsinterests'>JetPunk</span></a> / 
+					<a href='https://www.youtube.com/channel/UCbpuVmLLEmLWDlCim2dCgoA'><span class='contactsmusic'>YouTube</span></a> / 
+					<a href='https://www.linkedin.com/in/izzhafeez/'><span class='contactsawards'>LinkedIn</span></a> / 
+					<a href='https://blueticker117.wixsite.com/dontbluetickme'><span class='contactspuzzles'>Old Website</span></a> / 
+					<a href='https://www.youtube.com/watch?v=aRsWk4JZa5k'><span class='contactspersonal'>Tinder</span></a> / 
+					<a href='https://www.duolingo.com/profile/ZeefahZzi'><span class='contactsinterests'>Duolingo</span></a>
+				</p>
+			</section>
+		</section>
+		<section class='fullcontainer'>
+			<section class='tenmarginside'>
+				<p class='small' style='color:white'>© Ask me first before stealing anything hor</p>
+				<p class='small' style='color:white'>Izz Hafeez 2k20</p>
+			</section>
+		</section>
+	</div>
+</body>
+</html>

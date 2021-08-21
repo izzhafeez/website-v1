@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+	<link rel="stylesheet" href="index.css">
+	<script src='Main Page.js'></script>
+	<link rel='icon' type='image/png' href='img/Logo.png'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Alegreya Sans' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="https://www.desmos.com/api/v1.4/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+	<script data-ad-client="ca-pub-7546654516670304" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<title>My Name Izz Hafeez</title>
+	</head>
+<body>
+	<script>
+		$(document).ready(function(){
+			$('#navbar div:nth-child(3)').click(function() {
+				if($('#menu').css('display')==='none') {
+					$('#menu').css('display','inline');
+				} else {
+					$('#menu').css('display','none');
+				}
+			})
+			if($(window).scrollTop()>0.3*Math.min($(window).width(),$(window).height())) {
+				$('.tomove').css({'position':'fixed','top':'0'});
+				$('body:not(.tomove)').css({'margin-top':'10vmin'});
+			} else {
+				$('#navbar').css({'position':'relative','top':'0'});
+				$('#menu').css({'position':'absolute','top':'30vmin'});
+				$('body:not(.tomove)').css({'margin-top':'0vmin'});
+			}
+			$(window).on('scroll', function() {
+				if($(window).scrollTop()>0.3*Math.min($(window).width(),$(window).height())) {
+					$('.tomove').css({'position':'fixed','top':'0'});
+					$('body:not(.tomove)').css({'margin-top':'10vmin'});
+				} else {
+					$('#navbar').css({'position':'relative','top':'0'});
+					$('#menu').css({'position':'absolute','top':'30vmin'});
+					$('body:not(.tomove)').css({'margin-top':'0vmin'});
+				}
+			})
+		})
+	</script>
+	<!-- <div id='title'>
+		
+		<h1>My Name Izz Hafeez</h1>
+	</div> -->
+	<div style='max-height:calc(max(30vmin,150px))'><iframe src="https://www.desmos.com/calculator/tbtn5ltvzx?embed" class='calculator' frameborder=0></iframe></div>
+	<div id='navbar' class='tomove'>
+		<a href='#'><div><img src='img/navbar2.png'></div></a>
+		<div>Home</div>
+		<div><img src='img/navbar1.png'></div>
+	</div>
+	<div id='menu' class='tomove'>
+		<div style='height:calc(max(10vmin,50px))'></div>
+		<a href='awards.html' class='menu'><h2>Awards</h2></a>
+		<a href='interests.html' class='menu'><h2>Interests</h2></a>
+		<a href='personal.html' class='menu'><h2>Personal</h2></a>
+		<a href='music.html' class='menu'><h2>Music</h2></a>
+		<a href='math.html' class='menu'><h2>Math</h2></a>
+		<a href='puzzles.html' class='menu'><h2>Puzzles</h2></a>
+	</div>
+	<div class='posts'>
+		<div style='height:calc(max(10vmin,50px))'></div>
+		<img src='img/Logo.png' style='width:calc(max(25vmin,125px));height:calc(max(25vmin,125px));float:left;margin-top:1vmin'>
+		<div class='general fullwidth'><h2>About the Site<hr></h2><p>Hello there! My Name Izz Hafeez and I live in Singapore. Besides creating music, mathematical art and puzzles, I have been learning a few languages on the side. In this site, I share some of the things I've done, as well as my interests, hobbies and thoughts over the years.</p><p>Each post is color-coded according to category: <span style='color:#8332AC'>Awards</span>, <span style='color:#3581B8'>Interests</span>, <span style='color:#E63946'>Personal</span>, <span style='color:#F19A3E'>Music</span>, <span style='color:#06BA63'>Math</span> and <span style='color:#BBAE3C'>Puzzles</span>, so that it is easier to find what you're looking for. Be sure to check out my <a href='https://musescore.com/izzhafeez' style='color:#5D737E;text-decoration:underline'><b>MuseScore</b></a>, <a href='https://www.instagram.com/mynameizzhafeez/?hl=en'><span style='color:#5D737E;text-decoration:underline'><b>Insta</b></span><span style='color:#5D737E;text-decoration:underline'><b>gram</b></span></a> and <a href='https://www.youtube.com/channel/UCbpuVmLLEmLWDlCim2dCgoA' style='color:#5D737E;text-decoration:underline'><b>YouTube</b></a> channels!</p></div>
+		<div class='minibuffer'></div>
+
+		<div class='general fullwidth'><h2>Recent Posts<hr></h2></div>
+
+		<div class='awards halfwidth'><a href='awards.html'><p class='visitsite'>Visit site >></p></a><a href='awards.html'><img src='img/background1.jpg'></a><a href='awards.html'><h2>Awards</h2></a><div class='explaintext'><h5></h5></div></div>
+
+		<div class='interests halfwidth'><a href='interests.html'><p class='visitsite'>Visit site >></p></a><a href='interests.html'><img src='img/background1.jpg'></a><a href='interests.html'><h2>Interests</h2></a><div class='explaintext'><h5></h5></div></div>
+
+		<div class='awards halfwidth'><a href='awards.html'><p class='visitsite'>Visit site >></p></a><a href='awards.html'><img src='img/background1.jpg'></a><a href='awards.html'><h2>Awards</h2></a><div class='explaintext'><h5></h5></div></div>
+		
+		<div class='awards halfwidth'><a href='awards.html'><p class='visitsite'>Visit site >></p></a><a href='awards.html'><img src='img/background1.jpg'></a><a href='awards.html'><h2>Awards</h2></a><div class='explaintext'><h5></h5></div></div>
+		
+		<div class='awards halfwidth'><a href='awards.html'><p class='visitsite'>Visit site >></p></a><a href='awards.html'><img src='img/background1.jpg'></a><a href='awards.html'><h2>Awards</h2></a><div class='explaintext'><h5></h5></div></div>
+		
+		<div class='awards halfwidth'><a href='awards.html'><p class='visitsite'>Visit site >></p></a><a href='awards.html'><img src='img/background1.jpg'></a><a href='awards.html'><h2>Awards</h2></a><div class='explaintext'><h5></h5></div></div>
+	</div>
+
+	<div class='testing'></div>
+	<div class='testing'></div>
+
+	<div class='fullestwidth'>
+		<div style='height:calc(max(10vmin,50px))'></div>
+		<div class='' style='background:rgba(131,50,172,0.4)'><a href='awards.html'></a><a href='awards.html'><h1 style='color:#8332AC'>A w a r d s</h1></a><p>Ever since Primary 3, I have actively been searching for ways to up my <span style='color:#8332AC'>power</span> level. As such, I have been through quite a lot of competitions and courses these past few years. While I produced some great results, there are many times when I missed the mark. This site details some of times I triumphed, as well as the many times I got rekt.</p><a href='awards.html'><h3>Visit site >></h3></a>
+			<!-- <div class='tooltip'><img src='img/epps.png'><div class='tooltiptext' style='background-color:rgba(131,50,172,0.4);color:black'>Ages 7 - 12</div></div><div class='tooltip'><img src='img/vs.png'><div class='tooltiptext' style='background-color:rgba(131,50,172,0.4);color:black'>Ages 13 - 16</div></div><div class='tooltip'><img src='img/vjc.png'><div class='tooltiptext' style='background-color:rgba(131,50,172,0.4);color:black'>Ages 17 - 18</div></div><div class='tooltip'><img src='img/scdf.png'><div class='tooltiptext' style='background-color:rgba(131,50,172,0.4);color:black'>Ages 19+</div></div> -->
+			<div class='selectioncircle' style='vertical-align:middle;'><p>Primary</br>School</p></div>
+			<div class='selectioncircle' style='vertical-align:middle;'><p>Primary</br>School</p></div>
+			<div class='selectioncircle' style='vertical-align:middle;'><p>Primary</br>School</p></div>
+			<div class='selectioncircle' style='vertical-align:middle;'><p>Primary</br>School</p></div>
+		</div>
+
+		<div class='' style='background:rgba(53,129,184,0.4)'><a href='interests.html'></a><a href='interests.html'><h1 style='color:#3581B8'>I n t e r e s t s</h1></a><p>In pursuit of self-improvement, I always find myself picking up new hobbies and interests to pass the time. People often catch me doing random things and asking why. To that, my response has always been 'Why not?'. After all, there is much to learn. From the outer reaches of <span style='color:#3581B8'>space</span>, to the inner workings of the quantum world, one can never finish learning. Here are some of the topics that piqued my interest over the years. </p><a href='interests.html'><h3>Visit site >></h3></a><div class='tooltip'><img src='img/science.png' style='border-radius:50%'><div class='tooltiptext' style='background-color:rgba(53,129,184,0.4);color:black'>Science(s)</div></div><div class='tooltip'><img src='img/earth.png'><div class='tooltiptext' style='background-color:rgba(53,129,184,0.4);color:black'>Astronomy + Geography</div></div><div class='tooltip'><img src='img/languages.png'><div class='tooltiptext' style='background-color:rgba(53,129,184,0.4);color:black'>Languages</div></div><div class='tooltip'><img src='img/miscellaneous.png'><div class='tooltiptext' style='background-color:rgba(53,129,184,0.4);color:black'>Miscellaneous</div></div></div>
+
+		<div class='' style='background:rgba(230,57,70,0.4)'><a href='personal.html'></a><a href='personal.html'><h1 style='color:#E63946'>P e r s o n a l</h1></a><p>I am quite fortunate to have the life I have now, with no family issues and no financial problems. I am also grateful that God has given me the gift of Mathematics, a skill which I have put to good use. However, <span style='color:#E63946'>reality</span> is often disappointing. I have been facing several challenges in life: physical, mental and social. I've thought long and hard about this and realised that most of my problems can be traced down to just 4 key events in my life. Events that made me who I am. My core memories. </p><a href='personal.html'><p>Visit site >></p></a><div class='tooltip'><img src='img/personal1.png'><div class='tooltiptext' style='background-color:rgba(230,57,70,0.4);color:black'>Why I must never attract attention</div></div><div class='tooltip'><img src='img/malay.png'><div class='tooltiptext' style='background-color:rgba(230,57,70,0.4);color:black'>Why I hate Malay</div></div><div class='tooltip'><img src='img/bestfriend.png'><div class='tooltiptext' style='background-color:rgba(230,57,70,0.4);color:black'>Why I must never have a best friend</div></div><div class='tooltip'><img src='img/migraine.png'><div class='tooltiptext' style='background-color:rgba(230,57,70,0.4);color:black'>Why I'm hurt everyday</div></div></div>
+		
+		<div class='' style='background:rgba(241,154,62,0.4)'><a href='music.html'></a><a href='music.html'><h1 style='color:#D88B37'>M u s i c</h1></a><p>I've been involved in music for many stages in my life. It has always been an integral part of my <span style='color:#D88B37'>soul</span>. I have quite alot of experience playing piano, with a little time spent on guitar as well. Apart from that, I sang in my VS Choir during my secondary school days. But now I'm more involved in music than ever, creating transcriptions, medlies and even original songs!</p><a href='music.html'><p>Visit site >></p></a><div class='tooltip'><img src='img/transcriptions.png'><div class='tooltiptext' style='background-color:rgba(241,154,62,0.4);color:black'>Transcriptions</div></div><div class='tooltip'><img src='img/medlies.png'><div class='tooltiptext' style='background-color:rgba(241,154,62,0.4);color:black'>Medlies</div></div><div class='tooltip'><img src='img/Music Logo.png'><div class='tooltiptext' style='background-color:rgba(241,154,62,0.4);color:black'>Originals</div></div><div class='tooltip'><img src='img/musicexp.png'><div class='tooltiptext' style='background-color:rgba(241,154,62,0.4);color:black'>Experience</div></div></div>
+		
+		<div class='' style='background:rgba(6,286,99,0.4)'><a href='math.html'></a><a href='math.html'><h1 style='color:#06BA63'>M a t h</h1></a><p>Math has always been my strong suit. Taking Further Maths in JC and earning multiple awards in Math competitions, I like maths. A sizeable portion of my <span style='color:#06BA63'>time</span> in 2017-2018 was spent playing around with graphs on the Desmos app, a tool I often use today, designing graphs and such. </p><a href='math.html'><p>Visit site >></p></a><div class='tooltip'><img src='img/desmos.png' style='border-radius:50%'><div class='tooltiptext' style='background-color:rgba(6,286,99,0.4);color:black'>Graph Art</div></div><div class='tooltip'><img src='img/graphtechniques.png' style='border-radius:50%'><div class='tooltiptext' style='background-color:rgba(6,286,99,0.4);color:black'>Graphing Techniques</div></div><div class='tooltip'><img src='img/Math Logo.png'><div class='tooltiptext' style='background-color:rgba(6,286,99,0.4);color:black'>Math Problems</div></div><div class='tooltip'><img src='img/mathexp.png'><div class='tooltiptext' style='background-color:rgba(6,286,99,0.4);color:black'>Experience</div></div></div>
+		
+		<div class='' style='background:rgba(234,217,76,0.4)'><a href='puzzles.html'></a><a href='puzzles.html'><h1 style='color:#BBAE3C'>P u z z l e s</h1></a><p>I like challenging myself. But I like challenging others even more. So I've dedicated quite a bit of time coming up with puzzles and challenges meant to strengthen the <span style='color:#BBAE3C'>mind</span>. While many of the older, hand-written ones have been lost to the bin of rubbish, I've managed to save some.</p><a href='puzzles.html'><p>Visit site >></p></a><div class='tooltip'><img src='img/igpuzzles.png'><div class='tooltiptext' style='background-color:rgba(234,217,76,0.4);color:black'>Tricky Puzzles</div></div><div class='tooltip'><img src='img/passcode.png'><div class='tooltiptext' style='background-color:rgba(234,217,76,0.4);color:black'>Passcode</div></div><div class='tooltip'><img src='img/googlephoto.png'><div class='tooltiptext' style='background-color:rgba(234,217,76,0.4);color:black'>Google Photo</div></div><div class='tooltip'><img src='img/migraine.png'><div class='tooltiptext' style='background-color:rgba(234,217,76,0.4);color:black'>The Dumb Test</div></div></div>
+	</div>
+
+	<script type="text/javascript">
+	(function(d,s,id,u){
+	  if (d.getElementById(id)) return;
+	  var js, sjs = d.getElementsByTagName(s)[0],
+	      t = Math.floor(new Date().getTime() / 1000000);
+	  js=d.createElement(s); js.id=id; js.async=1; js.src=u+'?'+t;
+	  sjs.parentNode.insertBefore(js, sjs);
+	}(document, 'script', 'os-widget-jssdk', 'https://www.opinionstage.com/assets/loader.js'));
+	</script>
+	<section class='os-widget-container'><div class="os_widget" data-of="mynameizzhafeez" data-path="/mynameizzhafeez/email-list" id="os-widget-662309"></div></section>
+
+	<div class='posts'>
+		<div class='general fullwidth'><h2>Contact Me<hr></h2></div>
+		<a href='https://www.instagram.com/mynameizzhafeez/?hl=en'><div class='mathpuzzles contacts'><img src='img/instagramlogo.png'><p>Instagram</p></div></a>
+		<a href='https://musescore.com/izzhafeez'><div class='music contacts'><img src='img/musescorelogo.png'><h4>MuseScore</h4></div></a>
+		<a href='https://www.jetpunk.com/users/zeefahzzi'><div class='interests contacts'><img src='img/jetpunk.png'><h4>JetPunk</h4></div></a>
+		<a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'><div class='awards contacts'><img src='img/githublogo.png'><h4>GitHub</h4></div></a>
+		<a href='https://www.duolingo.com/profile/ZeefahZzi'><div class='interests contacts'><img src='img/duolingologo.png'><h4>Duolingo</h4></div></a>
+		<a href='mailto:blueticker117@gmail.com'><div class='personal contacts'><img src='img/gmaillogo.jpeg'><h4>Gmail</h4></div></a>
+		<a href='https://www.youtube.com/channel/UCbpuVmLLEmLWDlCim2dCgoA'><div class='music contacts'><img src='img/youtubelogo.png'><h4>YouTube</h4></div></a>
+		<a href='https://www.youtube.com/watch?v=aRsWk4JZa5k'><div class='personal contacts'><img src='img/tinderlogo.jpeg'><h4>Tinder</h4></div></a>
+		<a href='https://blueticker117.wixsite.com/dontbluetickme'><div class='puzzles contacts'><img src='img/Puzzles Logo.png'><h4>Old Website</h4></div></a>
+		<!-- <a href='https://sg.linkedin.com/in/izz-hafeez-bin-zek-hazley-7173a11a3'><div class='awards type3a'><img src='img/linkedin.png'><h2>LinkedIn</h2></div></a> -->
+		<div class='minibuffer'></div>
+	</div>
+	
+</body>
+</html>

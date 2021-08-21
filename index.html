@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+	<title>My Name Izz Hafeez (Old Page)</title>
+	<link rel="stylesheet" href="index.css">
+	<script src='Main Page.js'></script>
+	<link rel='icon' type='image/png' href='img/Logo.png'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	</head>
+<body>
+	<script>
+		$(document).ready(function(){
+			$('#navbar div:nth-child(3)').click(function() {
+				if ($('#menu').css('display')==='none') {
+					$('#menu').css('display','inline');
+				} else {
+					$('#menu').css('display','none');
+				}
+			})
+			if($(window).scrollTop()>0.5*$(window).width()) {
+				$('.tomove').css({'position':'fixed','top':'0'});
+				$('body:not(.tomove)').css({'margin-top':'10vmin'});
+			} else {
+				$('#navbar').css({'position':'relative','top':'0'});
+				$('#menu').css({'position':'absolute','top':'50vw'});
+				$('body:not(.tomove)').css({'margin-top':'0vmin'});
+			}
+			$(window).on('scroll', function() {
+				if ($(window).scrollTop()>0.5*$(window).width()) {
+					$('.tomove').css({'position':'fixed','top':'0'});
+					$('body:not(.tomove)').css({'margin-top':'10vmin'});
+				} else {
+					$('#navbar').css({'position':'relative','top':'0'});
+					$('#menu').css({'position':'absolute','top':'50vw'});
+					$('body:not(.tomove)').css({'margin-top':'0vmin'});
+				}
+			})
+			var textWrapper = document.querySelector('.ml10 .letters');
+			textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+			anime.timeline({loop: true})
+			  .add({
+			    targets: '.ml10 .letter',
+			    rotateY: [-90, 0],
+			    duration: 13000,
+			    delay: (el, i) => 45 * i
+			  }).add({
+			    targets: '.ml10',
+			    opacity: 0,
+			    duration: 2000,
+			    easing: "easeOutExpo",
+			    delay: 2000
+			  });
+		})
+	</script>
+	<!-- <div style='max-height:calc(max(30vmin,150px))'><iframe id='desmoshead' src="https://www.desmos.com/calculator/3uqorphslf?embed" class='calculator' frameborder=0></iframe></div> -->
+	<!-- <img src='img/headerdrop.png' style='width:100%;height:calc(max(30vmin,150px))'> -->
+	<!-- <div style='height:30vmin;text-align:center'>MY NAME IZZ HAFEEZ</div> -->
+	<div style="height:50vw; margin:0; background:#202020;">
+		<img src='img/squarelogo.jpg' style='width:40%; margin-left:30vw; margin-top:5%; position:absolute; display:inline-block; animation:spin 30s linear infinite, main 30s linear infinite; object-fit:cover; border-radius:50%;'>
+		<img src='img/squareawards.jpg' style='width:40%; margin-left:30vw; margin-top:5%; position:absolute; display:inline-block; animation:spin 30s linear infinite, awards 30s linear infinite; object-fit:cover; border-radius:50%;'>
+		<img src='img/squareinterests.jpg' style='width:40%; margin-left:30vw; margin-top:5%; position:absolute; display:inline-block; animation:spin 30s linear infinite, interests 30s linear infinite; object-fit:cover; border-radius:50%;'>
+		<img src='img/squarepersonal.jpg' style='width:40%; margin-left:30vw; margin-top:5%; position:absolute; display:inline-block; animation:spin 30s linear infinite, personal 30s linear infinite; object-fit:cover; border-radius:50%;'>
+		<img src='img/squaremusic.jpg' style='width:40%; margin-left:30vw; margin-top:5%; position:absolute; display:inline-block; animation:spin 30s linear infinite, music 30s linear infinite; object-fit:cover; border-radius:50%;'>
+		<img src='img/squaremath.jpg' style='width:40%; margin-left:30vw; margin-top:5%; position:absolute; display:inline-block; animation:spin 30s linear infinite, math 30s linear infinite; object-fit:cover; border-radius:50%;'>
+		<img src='img/squarepuzzles.jpg' style='width:40%; margin-left:30vw; margin-top:5%; position:absolute; display:inline-block; animation:spin 30s linear infinite, puzzles 30s linear infinite; object-fit:cover; border-radius:50%;'>
+		<h1 class="ml10">
+			<span class="text-wrapper">
+				<span class="letters">My Name Izz Hafeez</span>
+			</span>
+		</h1>
+	</div>
+	<div id='navbar' class='tomove'>
+		<a href='#'><div><img src='img/navbar2.png'></div></a>
+		<div>Home</div>
+		<div><img src='img/navbar1.png'></div>
+	</div>
+	<div id='menu' class='tomove'>
+		<div style='height:calc(max(10vmin,50px))'></div>
+		<a href='awards.html' class='menu'><h2>Awards</h2></a>
+		<a href='interests.html' class='menu'><h2>Interests</h2></a>
+		<a href='personal.html' class='menu'><h2>Personal</h2></a>
+		<a href='music.html' class='menu'><h2>Music</h2></a>
+		<a href='math.html' class='menu'><h2>Math</h2></a>
+		<a href='puzzles.html' class='menu'><h2>Puzzles</h2></a>
+	</div>
+	<!-- <div class='tencontainer blank'>.</div> -->
+	<!-- <div class='tencontainer blank'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+	</div> -->
+	<div class='fivecontainer blank empty'>.</div>
+	<div class='ninetycontainer'>
+		<section class='tenmargin'><p class='header'>About the Site<hr></p><p>Hello there! My Name Izz Hafeez and I live in Singapore. Besides creating music, mathematical art and puzzles, I have been learning a few languages on the side. In this site, I share some of the things I've done, as well as my interests, hobbies and thoughts over the years.</p><p>Each post is color-coded according to category: <span style='color:#8332AC'>Awards</span>, <span style='color:#3581B8'>Interests</span>, <span style='color:#E63946'>Personal</span>, <span style='color:#F19A3E'>Music</span>, <span style='color:#06BA63'>Math</span> and <span style='color:#BBAE3C'>Puzzles</span>, so that it is easier to find what you're looking for. Be sure to check out my <a href='https://musescore.com/izzhafeez' style='color:#5D737E;text-decoration:underline'><b>MuseScore</b></a>, <a href='https://www.instagram.com/mynameizzhafeez/?hl=en'><span style='color:#5D737E;text-decoration:underline'><b>Insta</b></span><span style='color:#5D737E;text-decoration:underline'><b>gram</b></span></a> and <a href='https://www.youtube.com/channel/UCbpuVmLLEmLWDlCim2dCgoA' style='color:#5D737E;text-decoration:underline'><b>YouTube</b></a> channels!</p></section>
+		<section class='nomargin'>
+			<section class='tenmarginside'><p class='header'>Featured<hr></p><a href='posts.html'><p>See More >></p></a></section>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='https://www.youtube.com/watch?v=4WWADSU9240&t=21s'><img src='music/headerpic/ndpmedley.jpg' style='width:70%;box-shadow:0px 5px 0px #F19A3E' class='imghover'></a>
+					<p class='subheader'>NDP Medley</p><p class='small'>I spent 2 months creating this medley, incorporating 20 of the most popular National Day Songs over the past years. I hope the music theory I used in this is enough and I hope you enjoy!</p><p><a href='https://www.youtube.com/watch?v=4WWADSU9240'>Visit Site >></a></p>
+				</section>
+			</section>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='https://www.desmos.com/calculator/xdzqp3qfwu'><img src='headerpic/headerlogo.png' style='width:70%;box-shadow:0px 5px 0px #06BA63' class='imghover'></a>
+					<p class='subheader'>Logo design</p><p class='small'>This graph was quite simple to make. Not many special formulas used here. It was just a series of guess and checks to obtain the perfect values to get this graph. And I'm quite satisfied with my decision to make this my logo.</p><p><a href='https://www.desmos.com/calculator/xdzqp3qfwu'>Visit Site >></a></p>
+				</section>
+			</section>
+			<section class='buffer'></section>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='interests/chinese.html'><img src='headerpic/chinese.jpg' style='width:70%;box-shadow:0px 5px 0px #3581B8' class='imghover'></a>
+					<p class='subheader'>中文</p><p class='small'>我已用了大约两年的时间学习中文。我暂且打算新冠病毒疫情后报名汉语水平考试第四级。在中文知识方面，我的本领一眼可能还高。其实我时时不得不要参考笔记。时至今日并不可说。但是我应当乐观来提高我的水平。</p><p><a href='interests/chinese.html'>Visit Site >></a></p>
+				</section>
+			</section>
+			<section class='buffer'></section>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='https://www.instagram.com/p/B_pI0SinWce/'><img src='puzzles/headerpic/passcode2.jpg' style='width:70%;box-shadow:0px 5px 0px #EAD94C' class='imghover'></a>
+					<p class='subheader'>Passcode 2</p><p class='small'>Intermediate difficulty puzzle. Each panel represents a different letter. Using expansive general knowledge, fill in those letters to complete the short phrase. Give the response to the phrase to get the answer!</p><p><a href='https://www.instagram.com/p/B_pI0SinWce/'>Visit Site >></a></p>
+				</section>
+			</section>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='interests/geography.html'><img src='interests/headerpic/geography.jpg' style='width:70%;box-shadow:0px 5px 0px #3581B8' class='imghover'></a>
+					<p class='subheader'>Geography</p><p class='small'>Picking up a world atlas when I was 4, I was immediately enthralled by the various regions of the world. Memorising most of the non-Caribbean, non-Oceania countries as well as their areas and capitals, Geography became one of my core interests.</p><p><a href='interests/geography.html'>Visit Site >></a></p>
+				</section>
+			</section>
+			<section class='halfcontainer'>
+				<section class='tenmarginside'>
+					<a href='music/transcriptions.html'><img src='music/headerpic/transcriptions.jpg' style='width:70%;box-shadow:0px 5px 0px #F19A3E' class='imghover'></a>
+					<p class='subheader'>Transcriptions</p><p class='small'>Though they may not be my proudest pieces, my transcriptions are my most popular. Doing both recent and old songs, my transcriptions are what got me my 900+ Musescore followers.</p><p><a href='music/transcriptions.html'>Visit Site >></a></p>
+				</section>
+			</section>
+			<section class='buffer'></section>
+		</section>
+	</div>
+	<div class='fivecontainer blank empty'>.</div>
+
+	<div class='fullcontainer'>
+		<section class='fullcontainer' style='background:rgba(131,50,172,0.1)'>
+			<section class='tenmargin'>
+				<a href='awards.html'></a><a href='awards.html' style='color:#8332AC'><p class='monospaced'>A w a r d s</p></a>
+				<p>Ever since Primary 3, I have actively been searching for ways to up my <span style='color:#8332AC'>power</span> level. As such, I have been through quite a lot of competitions and courses these past few years. While I produced some great results, there are many times when I missed the mark. This site details some of times I triumphed, as well as the many times I got rekt.</p><a href='awards.html'><p class='subheader'>Visit site >></p></a>
+				<!-- <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="izzhafeez"><a class="LI-simple-link" href='https://sg.linkedin.com/in/izzhafeez?trk=profile-badge'>Izz Hafeez Bin Zek Hazley</a></div> -->
+			</section>
+		</section>
+		<section class='fullcontainer' style='background:rgba(53,129,184,0.1)'>
+			<section class='tenmargin'>
+				<a href='interests.html'></a><a href='interests.html' style='color:#3581B8'><p class='monospaced'>I n t e r e s t s</p></a>
+				<p>In pursuit of self-improvement, I always find myself picking up new hobbies and interests to pass the time. People often catch me doing random things and asking why. To that, my response has always been 'Why not?'. After all, there is much to learn. From the outer reaches of <span style='color:#3581B8'>space</span>, to the inner workings of the quantum world, one can never finish learning. Here are some of the topics that piqued my interest over the years.</p><a href='interests.html'><p class='subheader'>Visit site >></p></a>
+			</section>
+		</section>
+		<section class='fullcontainer' style='background:rgba(230,57,70,0.1)'>
+			<section class='tenmargin'>
+				<a href='personal.html'></a><a href='personal.html' style='color:#E63946'><p class='monospaced'>P e r s o n a l</p></a>
+				<p>I am quite fortunate to have the life I have now, with no family issues and no financial problems. I am also grateful to have been given decent math skills, which I have put to good use. However, <span style='color:#E63946'>reality</span> is often disappointing. I have been facing several challenges in life: physical, mental and social. I've thought long and hard about this and realised that most of my problems can be traced down to just 4 key events in my life. Events that made me who I am. My core memories.</p><a href='personal.html'><p class='subheader'>Visit site >></p></a>
+			</section>
+		</section>
+		<section class='fullcontainer' style='background:rgba(241,154,62,0.1);'>
+			<section class='fullcontainer'>
+				<section class='tenmargin'>
+					<a href='music.html'></a><a href='music.html' style='color:#D88B37'><p class='monospaced'>M u s i c</p></a>
+					<p>I've been involved in music for many stages in my life. It has always been an integral part of my <span style='color:#D88B37'>soul</span>. I have quite alot of experience playing piano, with a little time spent on guitar as well. Apart from that, I sang in my VS Choir during my secondary school days. But now I'm more involved in music than ever, creating transcriptions, medlies and even original songs sometimes.</p><a href='music.html'><p class='subheader'>Visit site >></p></a>
+					<!-- <section class='wrapper'>
+						<iframe width="100%" height="100%" src="https://www.youtube.com/embed/4WWADSU9240" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</section> -->
+				</section>
+			</section>
+		</section>
+		<section class='fullcontainer' style='background:rgba(6,286,99,0.1)'>
+			<section class='fullcontainer'>
+				<section class='tenmargin'>
+					<a href='math.html'></a><a href='math.html' style='color:#06BA63'><p class='monospaced'>M a t h</p></a>
+					<p>Math has been my strongest subject throughout school life. Taking Further Maths in JC and earning multiple awards in Math competitions, I like maths. A sizeable portion of my <span style='color:#06BA63'>time</span> in 2017-2018 was spent playing around with graphs on the Desmos app, a tool I often use today, designing graphs and such.</p><a href='math.html'><p class='subheader'>Visit site >></p></a>
+					<!-- <section class='wrapper'>
+						<iframe src="https://www.desmos.com/calculator/rfp4jqpvyx?embed" width="100%" height="100%" style="border: 0px solid #ccc; filter: invert(1);" frameborder=0></iframe>
+					</section> -->
+				</section>
+			</section>
+		</section>
+		<section class='fullcontainer' style='background:rgba(234,217,76,0.1)'>
+			<section class='tenmargin'>
+				<a href='puzzles.html'></a><a href='puzzles.html' style='color:#BBAE3C'><p class='monospaced'>P u z z l e s</p></a>
+				<p>I like challenging myself. But I like challenging others even more. So I've dedicated quite a bit of time coming up with puzzles and challenges meant to strengthen the <span style='color:#BBAE3C'>mind</span>. While many of the older, hand-written ones have been lost to the bin of rubbish, I've managed to save some.</p><a href='puzzles.html'><p class='subheader'>Visit site >></p></a>
+			</section>
+		</section>
+	</div>
+	<!-- <div class='tencontainer blank'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+		<img src='img/sidedrop.png' style='width:90%; margin-left:5%;'>
+	</div> -->
+	<div class='fullcontainer' style='background:#3E4856;'>
+		<!-- <section class='halfcontainer'>
+			<section class='tenmarginside contacts'>
+				<p class='header'>Join the Mailing List!</p>
+				<script>(function(t,e,s,n){var o,a,c;t.SMCX=t.SMCX||[],e.getElementById(n)||(o=e.getElementsByTagName(s),a=o[o.length-1],c=e.createElement(s),c.type="text/javascript",c.async=!0,c.id=n,c.src=["https:"===location.protocol?"https://":"http://","widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgd_2BcEYo8O3z9VnKhrJB6wgHJfp1sXWTlxS580VT9icCxb.js"].join(""),a.parentNode.insertBefore(c,a))})(window,document,"script","smcx-sdk");</script>
+			</section>
+		</section> -->
+		<section class='fullcontainer'>
+			<section class='tenmarginside contacts'>
+				<p class='header'>Contact Me</p>
+				<p>
+					<a href='https://www.instagram.com/mynameizzhafeez/?hl=en'><span class='contactsmath'>Insta</span><span class='contactspuzzles'>gram</span></span></a> / 
+					<a href='https://musescore.com/izzhafeez'><span class='contactsmusic'>MuseScore</span></a> / 
+					<a href='mailto:blueticker117@gmail.com'><span class='contactspersonal'>Gmail</span></a> / 
+					<a href='https://www.jetpunk.com/users/zeefahzzi'><span class='contactsinterests'>JetPunk</span></a> / 
+					<a href='https://www.youtube.com/channel/UCbpuVmLLEmLWDlCim2dCgoA'><span class='contactsmusic'>YouTube</span></a> / 
+					<a href='https://www.linkedin.com/in/izzhafeez/'><span class='contactsawards'>LinkedIn</span></a> / 
+					<a href='https://blueticker117.wixsite.com/dontbluetickme'><span class='contactspuzzles'>Old Website</span></a> / 
+					<a href='https://www.youtube.com/watch?v=aRsWk4JZa5k'><span class='contactspersonal'>Tinder</span></a> / 
+					<a href='https://www.duolingo.com/profile/ZeefahZzi'><span class='contactsinterests'>Duolingo</span></a>
+				</p>
+			</section>
+		</section>
+		<section class='fullcontainer'>
+			<section class='tenmarginside'>
+				<p class='small' style='color:white'>© Ask me first before stealing anything hor</p>
+				<p class='small' style='color:white'>Izz Hafeez 2k20</p>
+			</section>
+		</section>
+	</div>
+</body>
+</html>
